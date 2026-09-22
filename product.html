@@ -173,6 +173,10 @@
       }
     }
   </style>
+  <script>
+    // Clean .html extension and /index.html from URL bar immediately without reload
+    (function(){try{var p=window.location.pathname;if(p.endsWith('/index.html')){var c=p.replace(/\/index\.html$/,'/')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}else if(p.endsWith('.html')){var c=p.replace(/\.html$/,'')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -180,7 +184,7 @@
   <!-- Header / Navigation -->
   <header class="nav" id="mainNavbar">
     <div class="nav-inner">
-      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+      <a class="brand" href="./" aria-label="YOGHAN Home">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
 
@@ -188,29 +192,29 @@
       <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
         <ul class="nav-links">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="./" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="products.html" class="nav-link active">Products</a>
+            <a href="products" class="nav-link active">Products</a>
           </li>
           <li class="nav-item">
-            <a href="specifications.html" class="nav-link">Specifications</a>
+            <a href="specifications" class="nav-link">Specifications</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
+            <a href="about" class="nav-link">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+            <a href="manufacturing" class="nav-link">Plant & Tech</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
 
       <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="products.html" class="btn-ghost" style="text-decoration:none;">← Catalogue</a>
+        <a href="products" class="btn-ghost" style="text-decoration:none;">← Catalogue</a>
         <button class="nav-cta" onclick="openQuoteModal()">
           <span>Request a Quote</span>
           <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -228,7 +232,7 @@
   <!-- Full-Screen Mobile Navigation Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="mobile-drawer-header">
-      <a class="brand" href="index.html" onclick="closeMobileNav()">
+      <a class="brand" href="./" onclick="closeMobileNav()">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
       <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
@@ -238,12 +242,12 @@
 
     <div class="mobile-drawer-body">
       <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
-        <li><a href="products.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">All Products Catalogue <span class="arr">→</span></a></li>
-        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
-        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
-        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
-        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+        <li><a href="./" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
       </ul>
 
       <div class="mobile-drawer-actions">
@@ -260,7 +264,7 @@
   <!-- Product Standalone Detail Section -->
   <main class="product-page-main">
     <div class="back-nav-bar">
-      <a href="products.html" class="back-link">
+      <a href="products" class="back-link">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back to Full Catalogue
       </a>
@@ -305,7 +309,7 @@
             <span>Enquire Spot Price for this Grade</span>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <a href="index.html#specs" class="btn-ghost">View Full QA Lab Bench</a>
+          <a href="./#specs" class="btn-ghost">View Full QA Lab Bench</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting — YOGHAN</title>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var segments = path.split('/').filter(Boolean);
+      var last = segments[segments.length - 1] || '';
+      if (last && !last.includes('.')) {
+        window.location.replace(last + '.html' + search + hash);
+      } else {
+        window.location.replace('./');
+      }
+    })();
+  </script>
+</head>
+<body style="background:#0b0a0c; color:#f4eee2; font-family:sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;">
+  <p>Loading YOGHAN...</p>
+</body>
+</html>
