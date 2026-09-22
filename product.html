@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Product Details — YOGHAN Advanced Fibres & Polymers</title>
+  <meta name="description" content="Technical specification, packaging configuration, and commercial inquiry for YOGHAN textile yarns, polyamide 6 chips, and ammonium sulphate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Standalone Product Page Specific Layout */
+    .product-page-main {
+      padding: 40px 5vw 80px;
+      min-height: 80vh;
+      background: var(--cream);
+    }
+    .back-nav-bar {
+      max-width: 1200px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-text);
+      padding: 8px 14px;
+      background: var(--stone);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    .back-link:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .standalone-product-card {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(34, 29, 23, 0.09);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+    }
+    .product-hero-visual {
+      position: relative;
+      background: #100d0e;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-spring);
+    }
+    .product-hero-visual:hover img {
+      transform: scale(1.06);
+    }
+    .hero-visual-badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 5;
+    }
+    .product-detail-info {
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .detail-kicker-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .detail-dept {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .product-detail-info h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 36px);
+      line-height: 1.2;
+      color: var(--ink-text);
+      margin: 0 0 12px;
+    }
+    .product-tagline {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin: 0 0 24px;
+      line-height: 1.55;
+    }
+    .specs-key-grid {
+      background: var(--cream);
+      border: 1px solid rgba(34, 29, 23, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .spec-key-item span {
+      display: block;
+      font-size: 11.5px;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+    .spec-key-item strong {
+      display: block;
+      font-size: 13.5px;
+      color: var(--ink-text);
+      margin-top: 2px;
+    }
+    .app-tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .app-tag-pill {
+      background: var(--stone);
+      color: var(--ink-text);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+    .product-detail-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .packaging-info-box {
+      margin-top: 20px;
+      padding: 14px 18px;
+      background: #f7f3ec;
+      border-left: 3px solid var(--red);
+      font-size: 13px;
+      color: #4a4138;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    @media (max-width: 900px) {
+      .standalone-product-card {
+        grid-template-columns: 1fr;
+      }
+      .product-hero-visual {
+        min-height: 320px;
+      }
+      .product-detail-info {
+        padding: 30px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="ticker-wrap">
+        <span class="ticker-badge">DIRECT MILL SUPPLY</span>
+        <span class="ticker-text">✦ Surat Production Line Certified: OEKO-TEX® Standard 100</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+912612984000" class="top-link">+91 (261) 298-4000</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" id="mainNavbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html#home">
+        <div class="brand-logo-wrap">
+          <svg class="brand-icon" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" opacity="0.85"/>
+            <path d="M9 12c3.5 2.5 3.5 6 0 8M16 8.5c3.5 3 3.5 12 0 15M23 12c-3.5 2.5-3.5 6 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2.5" fill="var(--red)"/>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">YOGHAN</span>
+          <span class="brand-tagline">ADVANCED FIBRES & POLYMERS</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html#product" class="btn-ghost">← All Products</a>
+        <button class="nav-cta" onclick="openQuoteModal()">Request Spot Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Standalone Detail Section -->
+  <main class="product-page-main">
+    <div class="back-nav-bar">
+      <a href="index.html#product" class="back-link">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Full Catalogue
+      </a>
+      <span style="font-size: 13px; color: var(--ink-muted);" id="breadcrumbCategory">Nylon 6 Solutions</span>
+    </div>
+
+    <div class="standalone-product-card" id="productCardContainer">
+      <!-- Content populated by JavaScript via URL query: ?id=productId -->
+      <div class="product-hero-visual">
+        <div class="hero-visual-badge">
+          <span class="badge-series" id="viewBadge">FDY</span>
+        </div>
+        <img id="viewImage" src="https://images.unsplash.com/photo-1542044801-30d3e45ae49a?auto=format&fit=crop&w=1200&q=85" alt="Product Image">
+      </div>
+
+      <div class="product-detail-info">
+        <div>
+          <div class="detail-kicker-row">
+            <span class="detail-dept" id="viewDept">Nylon Yarn – Regular</span>
+            <span class="badge-status in-stock" id="viewStatus">Ready Dispatch</span>
+          </div>
+          <h1 id="viewTitle">Nylon 6 FDY Semi-Dull Filament</h1>
+          <p class="product-tagline" id="viewTagline">Continuous filament yarn processed on multi-stage draw godets with computerized tension control.</p>
+
+          <h3 style="font-family: var(--serif); font-size: 16px; margin: 0 0 10px;">Guaranteed Technical Parameters</h3>
+          <div class="specs-key-grid" id="viewSpecsGrid">
+            <!-- Filled dynamically -->
+          </div>
+
+          <h3 style="font-family: var(--serif); font-size: 15px; margin: 0 0 10px;">Primary Commercial Applications</h3>
+          <div class="app-tags-list" id="viewApps">
+            <!-- Filled dynamically -->
+          </div>
+
+          <div class="packaging-info-box" id="viewPackaging">
+            <strong>Standard Mill Packaging:</strong> 5.0 kg / 6.0 kg bobbins on 290mm paper tubes. 48 bobbins per export pallet.
+          </div>
+        </div>
+
+        <div class="product-detail-actions" style="margin-top: 30px;">
+          <button class="btn-primary" onclick="openQuoteForCurrentProduct()">
+            <span>Enquire Spot Price for this Grade</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="index.html#specs" class="btn-ghost">View Full QA Lab Bench</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Commercial Quote Modal (Same seamless experience) -->
+  <div class="modal-overlay" id="quoteModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">DIRECT MILL ENQUIRY</span>
+        <h2>Request Price Quotation</h2>
+        <p>Direct spot and contract volume quotes from our Surat manufacturing complex.</p>
+      </div>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteName">Contact Name *</label>
+            <input type="text" id="quoteName" required placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="quoteCompany">Mill / Company *</label>
+            <input type="text" id="quoteCompany" required placeholder="Company Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quotePhone">Phone / WhatsApp *</label>
+            <input type="tel" id="quotePhone" required placeholder="+91 98250 12345">
+          </div>
+          <div class="form-group">
+            <label for="quoteEmail">Email *</label>
+            <input type="email" id="quoteEmail" required placeholder="procurement@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteProduct">Selected Product</label>
+            <input type="text" id="quoteProduct" readonly style="background: rgba(244,238,226,0.1); color:#fff;">
+          </div>
+          <div class="form-group">
+            <label for="quoteQty">Quantity (Metric Tonnes) *</label>
+            <input type="number" id="quoteQty" min="1" step="0.5" required placeholder="e.g. 5 MT">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="quoteDestination">Delivery Destination (City / Port) *</label>
+          <input type="text" id="quoteDestination" required placeholder="e.g. Surat, Bhiwandi, Mundra Port">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-ghost" onclick="closeQuoteModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Submit Inquiry</button>
+        </div>
+      </form>
+
+      <div class="form-success-card" id="quoteSuccessMsg" style="display:none;">
+        <div class="success-icon">✓</div>
+        <h3>Quotation Registered</h3>
+        <p>Our Surat commercial desk will message your WhatsApp with rates in < 2 hours.</p>
+        <button class="btn-primary" onclick="closeQuoteModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script>
+    let currentProduct = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'fdy-semi-dull';
+
+      currentProduct = YOGHAN_PRODUCTS.find(p => p.id === productId) || YOGHAN_PRODUCTS[0];
+      renderProductDetails(currentProduct);
+    });
+
+    function renderProductDetails(p) {
+      document.title = `${p.title} — YOGHAN Surat`;
+      document.getElementById('breadcrumbCategory').textContent = `${p.department} → ${p.title}`;
+      document.getElementById('viewBadge').textContent = p.badge;
+      document.getElementById('viewImage').src = p.image;
+      document.getElementById('viewImage').alt = p.title;
+      document.getElementById('viewDept').textContent = p.department;
+      document.getElementById('viewStatus').textContent = p.status;
+      document.getElementById('viewTitle').textContent = p.title;
+      document.getElementById('viewTagline').textContent = p.summary || p.tagline;
+
+      // Specs
+      const specsGrid = document.getElementById('viewSpecsGrid');
+      specsGrid.innerHTML = '';
+      if (p.keySpecs) {
+        Object.entries(p.keySpecs).forEach(([key, val]) => {
+          const item = document.createElement('div');
+          item.className = 'spec-key-item';
+          item.innerHTML = `<span>${key}:</span><strong>${val}</strong>`;
+          specsGrid.appendChild(item);
+        });
+      }
+
+      // Apps
+      const appsList = document.getElementById('viewApps');
+      appsList.innerHTML = '';
+      if (p.applications) {
+        p.applications.forEach(app => {
+          const tag = document.createElement('span');
+          tag.className = 'app-tag-pill';
+          tag.textContent = app;
+          appsList.appendChild(tag);
+        });
+      }
+
+      // Packaging
+      document.getElementById('viewPackaging').innerHTML = `<strong>Standard Mill Packaging:</strong> ${p.packaging || 'Standard moisture-barrier export packing.'}`;
+    }
+
+    function openQuoteModal() {
+      const modal = document.getElementById('quoteModal');
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeQuoteModal() {
+      const modal = document.getElementById('quoteModal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function openQuoteForCurrentProduct() {
+      if (currentProduct) {
+        document.getElementById('quoteProduct').value = currentProduct.title;
+      }
+      openQuoteModal();
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      document.getElementById('quoteForm').style.display = 'none';
+      document.getElementById('quoteSuccessMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

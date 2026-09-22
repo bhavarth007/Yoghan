@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderAllProducts();
   initNavbar();
   initHeroCanvas();
   initProductFilters();
@@ -11,16 +12,84 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initScrollReveals();
   runYarnCalculations(); // Initialize yarn calculator defaults
+  checkUrlHashForProduct(); // Check if URL specifies #detail-{productId}
 });
 
+window.addEventListener('hashchange', checkUrlHashForProduct);
+
 /* ==========================================================================
-   1. NAVIGATION & MOBILE DRAWER INTERACTIONS
+   1. RENDER ALL 20 PRODUCTS (5 PER DEPARTMENT) WITH 4K PHOTOGRAPHY
+   ========================================================================== */
+function renderAllProducts() {
+  const grid = document.getElementById('productsGrid');
+  if (!grid || typeof YOGHAN_PRODUCTS === 'undefined') return;
+
+  grid.innerHTML = '';
+
+  YOGHAN_PRODUCTS.forEach((p, idx) => {
+    const card = document.createElement('article');
+    card.className = 'product-card';
+    card.setAttribute('data-id', p.id);
+    card.setAttribute('data-category', p.category);
+    card.setAttribute('data-series', p.series);
+    card.setAttribute('data-name', p.title);
+    card.setAttribute('data-denier', p.denier);
+
+    // Badge styling
+    let badgeClass = 'badge-series';
+    if (p.badgeType === 'specialty') badgeClass += ' badge-crimson';
+    else if (p.badgeType === 'polymer') badgeClass += ' badge-polymer';
+    else if (p.badgeType === 'chem') badgeClass += ' badge-chem';
+
+    let statusClass = `badge-status ${p.statusType || 'in-stock'}`;
+
+    card.innerHTML = `
+      <div class="card-top-tag">
+        <span class="${badgeClass}">${p.badge}</span>
+        <span class="${statusClass}">${p.status}</span>
+      </div>
+
+      <div class="card-visual" onclick="openProductDetail('${p.id}')" title="Click to view full details & 4K photography">
+        <img class="card-visual-photo" src="${p.image}" alt="${p.title}" loading="lazy">
+        <div class="card-photo-gradient"></div>
+        <div class="yarn-shine"></div>
+      </div>
+
+      <div class="card-body">
+        <span class="card-kicker">${p.department}</span>
+        <h3 class="card-title" onclick="openProductDetail('${p.id}')" style="cursor:pointer;" title="View product specifications">${p.title}</h3>
+        <p class="card-desc">${p.tagline}</p>
+        
+        <div class="card-specs-list">
+          <div class="spec-chip"><strong>Count / Grade:</strong> ${p.denier}</div>
+          <div class="spec-chip"><strong>Lustre / Form:</strong> ${p.lustre}</div>
+          <div class="spec-chip"><strong>Tenacity / Purity:</strong> ${p.tenacity}</div>
+          <div class="spec-chip"><strong>Elongation:</strong> ${p.elongation}</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn-card-spec" onclick="openProductDetail('${p.id}')">View Details</button>
+        <button class="btn-card-quote" onclick="openQuoteFor('${p.title}')">Enquire</button>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  const countEl = document.getElementById('productCount');
+  if (countEl) {
+    countEl.textContent = `Showing ${YOGHAN_PRODUCTS.length} of ${YOGHAN_PRODUCTS.length} products`;
+  }
+}
+
+/* ==========================================================================
+   2. NAVIGATION & MOBILE DRAWER INTERACTIONS
    ========================================================================== */
 function initNavbar() {
   const navbar = document.getElementById('mainNavbar');
   const navToggle = document.getElementById('navToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
-  const navLinks = document.querySelectorAll('.nav-link');
   const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-sub-link');
   const mobileAccordion = document.getElementById('mobileProductsAccordion');
   const mobileSubMenu = document.getElementById('mobileProductsSub');
@@ -49,7 +118,6 @@ function initNavbar() {
   mobileLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       closeMobileNav();
-      // If link contains data-filter, apply it
       const cat = link.getAttribute('data-filter');
       const series = link.getAttribute('data-series');
       if (cat) {
@@ -122,6 +190,12 @@ function updateActiveNavLink() {
 }
 
 function applyFilterFromNav(cat, series = 'all') {
+  // Scroll to product catalogue
+  const productSec = document.getElementById('product');
+  if (productSec) {
+    productSec.scrollIntoView({ behavior: 'smooth' });
+  }
+
   // Activate corresponding category tab
   document.querySelectorAll('.filter-tab-btn').forEach(btn => {
     if (btn.getAttribute('data-cat') === cat) {
@@ -150,7 +224,7 @@ function applyFilterFromNav(cat, series = 'all') {
 }
 
 /* ==========================================================================
-   2. HERO INTERACTIVE WEAVING FIBER CANVAS ANIMATION
+   3. HERO WEAVING FIBER CANVAS ANIMATION
    ========================================================================== */
 function initHeroCanvas() {
   const canvas = document.getElementById('heroFiberCanvas');
@@ -197,7 +271,6 @@ function initHeroCanvas() {
       if (s.y < -100) s.y = height + 100;
       if (s.y > height + 100) s.y = -100;
 
-      // Mouse subtle wave interaction
       let mx = s.x;
       let my = s.y;
       if (mouse.x !== null) {
@@ -240,7 +313,7 @@ function initHeroCanvas() {
 }
 
 /* ==========================================================================
-   3. PRODUCT FILTERING, SEARCH & GRID ANIMATIONS
+   4. PRODUCT FILTERING, SEARCH & GRID ANIMATIONS
    ========================================================================== */
 function initProductFilters() {
   const tabBtns = document.querySelectorAll('.filter-tab-btn');
@@ -318,7 +391,6 @@ function filterProducts() {
 
     if (catMatch && seriesMatch && searchMatch) {
       card.style.display = 'flex';
-      // Trigger subtle entrance transition
       card.style.opacity = '0';
       card.style.transform = 'scale(0.96) translateY(8px)';
       setTimeout(() => {
@@ -357,7 +429,110 @@ function resetAllFilters() {
 }
 
 /* ==========================================================================
-   4. TECHNICAL SPECIFICATIONS TABS
+   5. DEEP PRODUCT DETAIL MODAL & URL HASH ROUTING
+   ========================================================================== */
+function openProductDetail(productId) {
+  if (typeof YOGHAN_PRODUCTS === 'undefined') return;
+
+  const product = YOGHAN_PRODUCTS.find(p => p.id === productId) || YOGHAN_PRODUCTS[0];
+  if (!product) return;
+
+  const modal = document.getElementById('specModal');
+  const badge = document.getElementById('specModalBadge');
+  const title = document.getElementById('specModalTitle');
+  const subtitle = document.getElementById('specModalSubtitle');
+  const body = document.getElementById('specModalBody');
+
+  if (badge) badge.textContent = `${product.department.toUpperCase()} • ${product.badge}`;
+  if (title) title.textContent = product.title;
+  if (subtitle) subtitle.textContent = product.summary || product.tagline;
+
+  // Build rich modal body with 4K image, specs, and applications
+  let html = `
+    <div class="modal-product-visual-wrap">
+      <img src="${product.image}" alt="${product.title}">
+      <div class="modal-visual-overlay-tag">
+        <span class="badge-series">${product.badge}</span>
+      </div>
+    </div>
+
+    <div class="spec-grid-info">
+  `;
+
+  if (product.keySpecs) {
+    Object.entries(product.keySpecs).forEach(([k, v]) => {
+      html += `<div class="spec-kv"><span>${k}:</span><strong>${v}</strong></div>`;
+    });
+  }
+
+  html += `</div>`;
+
+  if (product.applications && product.applications.length > 0) {
+    html += `
+      <div class="modal-apps-wrap">
+        <h4>Target Commercial Applications:</h4>
+        <div class="modal-apps-chips">
+          ${product.applications.map(a => `<span class="modal-app-chip">${a}</span>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  if (product.packaging) {
+    html += `
+      <div class="modal-pkg-note">
+        <strong>Export Packaging:</strong> ${product.packaging}
+      </div>
+    `;
+  }
+
+  body.innerHTML = html;
+
+  // Update modal footer actions
+  const modalFooter = modal.querySelector('.modal-footer-actions');
+  if (modalFooter) {
+    modalFooter.innerHTML = `
+      <a href="product.html?id=${product.id}" target="_blank" class="btn-ghost" style="text-decoration:none;" title="Open in separate tab">
+        <span>Open Standalone Page</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+      </a>
+      <button class="btn-primary" onclick="closeSpecModal(); openQuoteFor('${product.title}');">
+        <span>Request Mill Quote for this Grade</span>
+      </button>
+    `;
+  }
+
+  // Update URL hash for sharing
+  window.location.hash = `detail-${product.id}`;
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSpecModal() {
+  const modal = document.getElementById('specModal');
+  if (modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
+function checkUrlHashForProduct() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#detail-')) {
+    const prodId = hash.replace('#detail-', '');
+    openProductDetail(prodId);
+  }
+}
+
+function openSpecSheetModal() {
+  openProductDetail('fdy-semi-dull');
+}
+
+/* ==========================================================================
+   6. TECHNICAL SPECIFICATIONS BENCH TABS
    ========================================================================== */
 function initSpecsTabs() {
   const specTabs = document.querySelectorAll('.spec-tab-btn');
@@ -379,7 +554,7 @@ function initSpecsTabs() {
 }
 
 /* ==========================================================================
-   5. ANIMATED NUMBER COUNTERS (HERO & ABOUT SECTIONS)
+   7. ANIMATED NUMBER COUNTERS
    ========================================================================== */
 function initCounters() {
   const counters = document.querySelectorAll('.counter');
@@ -410,7 +585,6 @@ function animateCounter(element, target, decimal = 0) {
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    // Ease out expo curve
     const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
     const currentVal = target * easeProgress;
 
@@ -435,7 +609,7 @@ function animateCounter(element, target, decimal = 0) {
 }
 
 /* ==========================================================================
-   6. SCROLL REVEALS (INTERSECTION OBSERVER)
+   8. SCROLL REVEALS
    ========================================================================== */
 function initScrollReveals() {
   const targets = document.querySelectorAll('.reveal, .reveal-stagger');
@@ -457,7 +631,7 @@ function initScrollReveals() {
 }
 
 /* ==========================================================================
-   7. COMMERCIAL QUOTE MODAL & PRE-FILL ACTIONS
+   9. COMMERCIAL QUOTE MODAL & PRE-FILL
    ========================================================================== */
 function openQuoteModal() {
   const modal = document.getElementById('quoteModal');
@@ -481,11 +655,18 @@ function openQuoteFor(productName) {
   openQuoteModal();
   const selectEl = document.getElementById('quoteProduct');
   if (selectEl) {
+    let matched = false;
     for (let i = 0; i < selectEl.options.length; i++) {
-      if (selectEl.options[i].value.includes(productName) || productName.includes(selectEl.options[i].value)) {
+      if (selectEl.options[i].text.includes(productName) || productName.includes(selectEl.options[i].text) || selectEl.options[i].value.includes(productName)) {
         selectEl.selectedIndex = i;
+        matched = true;
         break;
       }
+    }
+    if (!matched) {
+      // Add or set custom
+      const opt = new Option(productName, productName, true, true);
+      selectEl.add(opt);
     }
   }
 }
@@ -525,7 +706,7 @@ function handleQuoteSubmit(e) {
 }
 
 /* ==========================================================================
-   8. YARN YIELD CALCULATOR LOGIC
+   10. YARN YIELD CALCULATOR LOGIC
    ========================================================================== */
 function openCalculatorModal() {
   const modal = document.getElementById('calcModal');
@@ -555,17 +736,10 @@ function runYarnCalculations() {
   const denier = parseFloat(denierInput.value) || 40;
   const weightKg = parseFloat(weightInput.value) || 1;
 
-  // Linear Meters = (9000 * weight in grams) / denier
   const weightGrams = weightKg * 1000;
   const meters = (9000 * weightGrams) / denier;
-
-  // Decitex (dtex) = Denier * 1.1111
   const dtex = denier * 1.1111;
-
-  // English Cotton Count (Ne) = 5315 / Denier
   const ne = 5315 / denier;
-
-  // Metric Count (Nm) = 9000 / Denier
   const nm = 9000 / denier;
 
   document.getElementById('resMeters').textContent = Math.round(meters).toLocaleString() + ' m';
@@ -575,148 +749,8 @@ function runYarnCalculations() {
 }
 
 /* ==========================================================================
-   9. PRODUCT TECHNICAL DATA SHEET QUICK VIEW
+   11. MODAL BACKDROP & KEY LISTENERS
    ========================================================================== */
-const SPEC_DATA = {
-  'fdy-reg': {
-    title: 'Nylon 6 Fully Drawn Yarn (FDY)',
-    kicker: 'CONTINUOUS DRAW GODET FILAMENT',
-    specs: [
-      { label: 'Denier Availability', val: '20D, 30D, 40D, 50D, 70D, 100D, 210D' },
-      { label: 'Filament Matrix', val: '1f (mono) up to 68f (micro-filament)' },
-      { label: 'Tenacity (Breaking Strength)', val: '4.80 – 5.50 grams / denier' },
-      { label: 'Elongation at Break', val: '28.0% – 32.0% (± 2.5%)' },
-      { label: 'Boiling Water Shrinkage', val: '7.0% – 8.5%' },
-      { label: 'Evenness CV%', val: '< 1.05% (Uster Tester 5)' },
-      { label: 'Spin Finish Oil Pick-up (OPU)', val: '0.85% – 1.10% (Low splash water-jet finish)' },
-      { label: 'Package Weight & Tube', val: '5.0 kg / 6.0 kg on 290mm paper tube' }
-    ]
-  },
-  'dty-reg': {
-    title: 'Nylon 6 Drawn Textured Yarn (DTY)',
-    kicker: 'CRIMPED & HIGH-BULK INTERLACED',
-    specs: [
-      { label: 'Denier / Ply', val: '30D/24f, 40D/34f, 70D/24f, 70D/68f (1-ply & 2-ply)' },
-      { label: 'Crimp Contraction (CC)', val: '43.0% – 48.0%' },
-      { label: 'Crimp Stability (CS)', val: '84.0% – 88.0%' },
-      { label: 'Interlace Intensity', val: 'Non-interlaced (NIM), Soft (SIM), High (HIM 80+ knots/m)' },
-      { label: 'Tenacity', val: '4.20 – 4.70 grams / denier' },
-      { label: 'Boiling Water Shrinkage', val: '3.2% – 4.0%' },
-      { label: 'Coning Package', val: '5.5 kg bi-conical paper cone, shrink-wrapped' },
-      { label: 'Primary Use', val: 'Seamless lingerie, activewear, circular jersey & raschel knit' }
-    ]
-  },
-  'poy-reg': {
-    title: 'Nylon 6 Partially Oriented Yarn (POY)',
-    kicker: 'FEEDSTOCK FOR TEXTURIZING & DRAW-TWISTING',
-    specs: [
-      { label: 'Feed Denier Range', val: '50D, 85D, 115D, 170D, 280D' },
-      { label: 'Elongation Range', val: '68% – 76%' },
-      { label: 'Uster Unevenness U%', val: '< 0.70%' },
-      { label: 'Residual Tension', val: 'Uniform across cheese inner and outer layers' },
-      { label: 'Cheese Dimensions', val: 'Outer Dia 420mm, Traverse 150mm' },
-      { label: 'Net Package Weight', val: '10.5 kg – 12.0 kg per cheese' }
-    ]
-  },
-  'hoy-reg': {
-    title: 'Nylon 6 Highly Oriented Yarn (HOY)',
-    kicker: 'DIRECT WEAVING SINGLE STEP FILAMENT',
-    specs: [
-      { label: 'Denier Counts', val: '30D/12f, 40D/24f, 70D/36f' },
-      { label: 'Spinning Velocity', val: '4,800 – 5,200 meters/min' },
-      { label: 'Boiling Shrinkage', val: '6.5% – 8.5%' },
-      { label: 'Tenacity', val: '4.6 – 5.0 gpd' },
-      { label: 'Direct Weaving Benefit', val: 'Eliminates sizing process on modern rapier & air jet looms' }
-    ]
-  },
-  'dope-dyed': {
-    title: 'Dope-Dyed & Bright Trilobal Specialty Nylon',
-    kicker: 'PIGMENT SPUN-DYED FILAMENT',
-    specs: [
-      { label: 'Standard Shades', val: 'Jet Black (Carbon Black), Ruby Red, Royal Blue, Emerald Green' },
-      { label: 'Custom Shade Matching', val: 'Available for order quantities ≥ 5 MT' },
-      { label: 'Washing Fastness', val: 'Grade 5 (ISO 105-C06)' },
-      { label: 'Light Fastness', val: 'Grade 7-8 (ISO 105-B02 Xenon Arc)' },
-      { label: 'Environmental Benefit', val: 'Zero water consumption and zero wastewater dyehouse discharge' }
-    ]
-  },
-  'high-tenacity': {
-    title: 'High-Tenacity Industrial Nylon 6 (HT)',
-    kicker: 'HEAVY-DUTY TECHNICAL FILAMENT',
-    specs: [
-      { label: 'Industrial Deniers', val: '210D/36f, 420D/72f, 840D/144f' },
-      { label: 'Breaking Tenacity', val: '≥ 7.5 to 8.2 grams / denier' },
-      { label: 'Elongation at Break', val: '18.0% – 22.0%' },
-      { label: 'Hot Air Shrinkage (177°C)', val: '5.5% – 7.0%' },
-      { label: 'Applications', val: 'Military parachutes, marine rope cordage, conveyor webbing, industrial fishnets' }
-    ]
-  },
-  'pa6-chips': {
-    title: 'Polyamide 6 Polymer Chips (Virgin)',
-    kicker: 'CONTINUOUS HYDROLYTIC POLYMERIZATION',
-    specs: [
-      { label: 'Available Relative Viscosities', val: '2.45 ± 0.03 (Textile), 2.70 ± 0.03 (Compounding), 3.30 ± 0.04 (Extrusion)' },
-      { label: 'Extractable Caprolactam Monomer', val: '≤ 0.55% w/w (Hot water extraction)' },
-      { label: 'Moisture in Packed Granules', val: '≤ 0.06% w/w (Karl Fischer)' },
-      { label: 'Melting Point (DSC)', val: '220°C – 222°C' },
-      { label: 'Packing Formats', val: '25 kg multi-wall moisture-barrier paper bags, 1,000 kg PP Jumbo Bags, Bulk Silo' }
-    ]
-  },
-  'ammo-sulphate': {
-    title: 'Industrial & Agro Ammonium Sulphate — (NH₄)₂SO₄',
-    kicker: 'HIGH-PURITY BYPRODUCT CRYSTALS',
-    specs: [
-      { label: 'Ammoniacal Nitrogen Content', val: '20.95% by weight (Guaranteed Min 20.6%)' },
-      { label: 'Available Sulphur (as S)', val: '24.10% by weight (Guaranteed Min 23.0%)' },
-      { label: 'Free Moisture', val: '≤ 0.25%' },
-      { label: 'Free Acidity (as H₂SO₄)', val: '≤ 0.03%' },
-      { label: 'Grain Size Distribution', val: 'Free-flowing white crystalline powder / granules, anti-caking treated' },
-      { label: 'Regulatory Compliance', val: '100% compliant with Indian Fertilizer Control Order (FCO) 1985' }
-    ]
-  }
-};
-
-function openProductDetail(key) {
-  const data = SPEC_DATA[key];
-  if (!data) return;
-
-  const modal = document.getElementById('specModal');
-  const badge = document.getElementById('specModalBadge');
-  const title = document.getElementById('specModalTitle');
-  const subtitle = document.getElementById('specModalSubtitle');
-  const body = document.getElementById('specModalBody');
-
-  if (badge) badge.textContent = data.kicker;
-  if (title) title.textContent = data.title;
-  if (subtitle) subtitle.textContent = 'Surat Quality Assurance Lab certified specifications & physical parameters.';
-
-  let html = '<div class="spec-grid-info">';
-  data.specs.forEach(s => {
-    html += `<div class="spec-kv"><span style="color:var(--ash); display:block; font-size:11.5px;">${s.label}:</span><strong>${s.val}</strong></div>`;
-  });
-  html += '</div>';
-
-  body.innerHTML = html;
-
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function openSpecSheetModal() {
-  openProductDetail('fdy-reg');
-}
-
-function closeSpecModal() {
-  const modal = document.getElementById('specModal');
-  if (modal) {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-}
-
-// Close modals on clicking overlay backdrop
 window.addEventListener('click', (e) => {
   if (e.target.classList.contains('modal-overlay')) {
     e.target.classList.remove('open');
@@ -725,7 +759,6 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// Close modals on Escape key
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.querySelectorAll('.modal-overlay.open').forEach(modal => {
@@ -737,9 +770,6 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-/* ==========================================================================
-   10. TOAST NOTIFICATIONS
-   ========================================================================== */
 function showToast(message, type = 'info') {
   const box = document.getElementById('toastBox');
   if (!box) return;
