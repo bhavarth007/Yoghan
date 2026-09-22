@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Clean .html extension and /index.html from URL bar immediately without reload
+    (function(){try{var p=window.location.pathname;if(p.endsWith('/index.html')){var c=p.replace(/\/index\.html$/,'/')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}else if(p.endsWith('.html')){var c=p.replace(/\.html$/,'')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -21,7 +25,7 @@
   <!-- Header / Navigation -->
   <header class="nav" id="mainNavbar">
     <div class="nav-inner">
-      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+      <a class="brand" href="./" aria-label="YOGHAN Home">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
 
@@ -29,22 +33,22 @@
       <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
         <ul class="nav-links">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="./" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="products.html" class="nav-link">Products</a>
+            <a href="products" class="nav-link">Products</a>
           </li>
           <li class="nav-item">
-            <a href="specifications.html" class="nav-link">Specifications</a>
+            <a href="specifications" class="nav-link">Specifications</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
+            <a href="about" class="nav-link">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="manufacturing.html" class="nav-link active">Plant & Tech</a>
+            <a href="manufacturing" class="nav-link active">Plant & Tech</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +76,7 @@
   <!-- Full-Screen Mobile Navigation Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="mobile-drawer-header">
-      <a class="brand" href="index.html" onclick="closeMobileNav()">
+      <a class="brand" href="./" onclick="closeMobileNav()">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
       <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
@@ -82,12 +86,12 @@
 
     <div class="mobile-drawer-body">
       <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
-        <li><a href="products.html" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
-        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
-        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
-        <li><a href="manufacturing.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Surat Plant & Tech <span class="arr">→</span></a></li>
-        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+        <li><a href="./" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
       </ul>
 
       <div class="mobile-drawer-actions">
@@ -229,8 +233,8 @@
           <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Our extrusion and spinning engineers provide tailored recommendations for specific loom speeds, knit densities, and injection molding cycles.</p>
         </div>
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <a href="contact.html" class="btn-primary" style="text-decoration:none;">Talk to Technical Team</a>
-          <a href="specifications.html" class="btn-ghost" style="text-decoration:none;">Review Lab Specs Bench →</a>
+          <a href="contact" class="btn-primary" style="text-decoration:none;">Talk to Technical Team</a>
+          <a href="specifications" class="btn-ghost" style="text-decoration:none;">Review Lab Specs Bench →</a>
         </div>
       </div>
 
@@ -357,7 +361,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col brand-col">
-        <a class="brand" href="index.html" aria-label="YOGHAN Home">
+        <a class="brand" href="./" aria-label="YOGHAN Home">
           <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
         </a>
         <p class="footer-brand-desc">
@@ -373,24 +377,24 @@
       <div class="footer-col">
         <h4>Products</h4>
         <ul class="footer-link-list">
-          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
-          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
-          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
-          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
-          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
-          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
+          <li><a href="products">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products">Ammonium Sulphate Fertilizer</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul class="footer-link-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Product Catalogue</a></li>
-          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
-          <li><a href="about.html">About YOGHAN</a></li>
-          <li><a href="manufacturing.html">Plant & Technology</a></li>
-          <li><a href="contact.html">Commercial Contact</a></li>
+          <li><a href="./">Home</a></li>
+          <li><a href="products">Product Catalogue</a></li>
+          <li><a href="specifications">Laboratory Specs Bench</a></li>
+          <li><a href="about">About YOGHAN</a></li>
+          <li><a href="manufacturing">Plant & Technology</a></li>
+          <li><a href="contact">Commercial Contact</a></li>
         </ul>
       </div>
 

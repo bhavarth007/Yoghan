@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Clean .html extension and /index.html from URL bar immediately without reload
+    (function(){try{var p=window.location.pathname;if(p.endsWith('/index.html')){var c=p.replace(/\/index\.html$/,'/')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}else if(p.endsWith('.html')){var c=p.replace(/\.html$/,'')+window.location.search+window.location.hash;window.history.replaceState(null,'',c)}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -21,7 +25,7 @@
   <!-- ==================== HEADER / NAVIGATION ==================== -->
   <header class="nav" id="mainNavbar">
     <div class="nav-inner">
-      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+      <a class="brand" href="./" aria-label="YOGHAN Home">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
 
@@ -29,22 +33,22 @@
       <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
         <ul class="nav-links">
           <li class="nav-item">
-            <a href="index.html" class="nav-link active">Home</a>
+            <a href="./" class="nav-link active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="products.html" class="nav-link">Products</a>
+            <a href="products" class="nav-link">Products</a>
           </li>
           <li class="nav-item">
-            <a href="specifications.html" class="nav-link">Specifications</a>
+            <a href="specifications" class="nav-link">Specifications</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
+            <a href="about" class="nav-link">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+            <a href="manufacturing" class="nav-link">Plant & Tech</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +76,7 @@
   <!-- ==================== FULL-SCREEN MOBILE NAVIGATION DRAWER ==================== -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="mobile-drawer-header">
-      <a class="brand" href="index.html" onclick="closeMobileNav()">
+      <a class="brand" href="./" onclick="closeMobileNav()">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
       <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
@@ -82,12 +86,12 @@
 
     <div class="mobile-drawer-body">
       <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Home <span class="arr">→</span></a></li>
-        <li><a href="products.html" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
-        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
-        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
-        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
-        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+        <li><a href="./" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Home <span class="arr">→</span></a></li>
+        <li><a href="products" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
       </ul>
 
       <div class="mobile-drawer-actions">
@@ -123,7 +127,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="products.html" class="btn-primary hero-btn" style="text-decoration:none;">
+        <a href="products" class="btn-primary hero-btn" style="text-decoration:none;">
           <span>Explore Product Catalogue</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -182,7 +186,7 @@
                 FDY, DTY, POY, and HOY continuous filament yarns engineered for high-speed water jet, rapier weaving, and circular knitting.
               </p>
             </div>
-            <a href="products.html?cat=nylon-reg" class="btn-division-card">Explore Regular Yarns →</a>
+            <a href="products?cat=nylon-reg" class="btn-division-card">Explore Regular Yarns →</a>
           </div>
         </article>
 
@@ -200,7 +204,7 @@
                 Dope-dyed black and vibrant colors, bright trilobal diamond sheen, antimicrobial silver-ion, and high-tenacity industrial cordage.
               </p>
             </div>
-            <a href="products.html?cat=nylon-feat" class="btn-division-card">Explore Specialty Fibres →</a>
+            <a href="products?cat=nylon-feat" class="btn-division-card">Explore Specialty Fibres →</a>
           </div>
         </article>
 
@@ -218,7 +222,7 @@
                 Textile spinning grade (RV 2.45), engineering plastics (RV 2.70), film extrusion, and high-viscosity industrial chips (RV 3.30).
               </p>
             </div>
-            <a href="products.html?cat=chips" class="btn-division-card">Explore PA6 Chips →</a>
+            <a href="products?cat=chips" class="btn-division-card">Explore PA6 Chips →</a>
           </div>
         </article>
 
@@ -236,7 +240,7 @@
                 Pure crystalline caprolactam byproduct (21% N, 24% S), FCO certified for agricultural soil nutrition and industrial chemistry.
               </p>
             </div>
-            <a href="products.html?cat=fertilizer" class="btn-division-card">Explore Fertilizers →</a>
+            <a href="products?cat=fertilizer" class="btn-division-card">Explore Fertilizers →</a>
           </div>
         </article>
 
@@ -244,7 +248,7 @@
 
       <!-- View All 20 Products Banner -->
       <div style="margin-top: 40px; text-align: center;">
-        <a href="products.html" class="btn-primary" style="text-decoration:none; padding: 14px 36px; font-size: 15px;">
+        <a href="products" class="btn-primary" style="text-decoration:none; padding: 14px 36px; font-size: 15px;">
           View Complete 20-Product Catalogue with 4K Gallery →
         </a>
       </div>
@@ -277,7 +281,7 @@
               <span style="font-size: 13px; color: var(--ink-muted);">Barcode Traceability</span>
             </div>
           </div>
-          <a href="specifications.html" class="btn-primary" style="text-decoration:none;">Open Laboratory Specs Bench →</a>
+          <a href="specifications" class="btn-primary" style="text-decoration:none;">Open Laboratory Specs Bench →</a>
         </div>
         <div style="background: var(--cream); border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 32px;">
           <span style="font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: 1px;">LAB BENCH PREVIEW</span>
@@ -314,7 +318,7 @@
           <p style="font-size: 15px; color: var(--ash); line-height: 1.6; margin-bottom: 24px;">
             Our Surat polymer complex pairs automated VK columns with Oerlikon Barmag WINGS take-up winders. We operate with a Zero Liquid Discharge (ZLD) policy, recycling 100% of caprolactam wash streams and recovering high-purity crystalline ammonium sulphate.
           </p>
-          <a href="manufacturing.html" class="btn-primary" style="text-decoration:none;">Explore Plant Infrastructure & Technology →</a>
+          <a href="manufacturing" class="btn-primary" style="text-decoration:none;">Explore Plant Infrastructure & Technology →</a>
         </div>
       </div>
     </div>
@@ -330,7 +334,7 @@
           <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 24px;">
             Founded in 1994 by <strong>Ghanshyam Dobariya</strong> and <strong>Yogesh Pansuria</strong> in Surat, Gujarat — the powerhouse behind 40% of India's synthetic textile production — YOGHAN has grown into a 48,000 MT/year continuous polymerization and spinning enterprise supplying 28 Indian states and 18+ export countries.
           </p>
-          <a href="about.html" class="btn-primary" style="text-decoration:none;">Meet the Founders & Our Story →</a>
+          <a href="about" class="btn-primary" style="text-decoration:none;">Meet the Founders & Our Story →</a>
         </div>
         <div class="teaser-stat-grid">
           <div class="stat-card" style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid rgba(34,29,23,0.08);">
@@ -421,7 +425,7 @@
 
         <div class="contact-card-actions">
           <button class="btn-primary quote-btn-lg" onclick="openQuoteModal()">Request Custom Quote</button>
-          <a href="contact.html" class="btn-ghost quote-btn-lg" style="text-decoration:none; text-align:center;">Commercial Contact Page →</a>
+          <a href="contact" class="btn-ghost quote-btn-lg" style="text-decoration:none; text-align:center;">Commercial Contact Page →</a>
           <span class="turnaround-note">⚡ Typical commercial response in &lt; 2 hours</span>
         </div>
       </div>
@@ -432,7 +436,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col brand-col">
-        <a class="brand" href="index.html" aria-label="YOGHAN Home">
+        <a class="brand" href="./" aria-label="YOGHAN Home">
           <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
         </a>
         <p class="footer-brand-desc">
@@ -448,24 +452,24 @@
       <div class="footer-col">
         <h4>Products</h4>
         <ul class="footer-link-list">
-          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
-          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
-          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
-          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
-          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
-          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
+          <li><a href="products">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products">Ammonium Sulphate Fertilizer</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul class="footer-link-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Product Catalogue</a></li>
-          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
-          <li><a href="about.html">About YOGHAN</a></li>
-          <li><a href="manufacturing.html">Plant & Technology</a></li>
-          <li><a href="contact.html">Commercial Contact</a></li>
+          <li><a href="./">Home</a></li>
+          <li><a href="products">Product Catalogue</a></li>
+          <li><a href="specifications">Laboratory Specs Bench</a></li>
+          <li><a href="about">About YOGHAN</a></li>
+          <li><a href="manufacturing">Plant & Technology</a></li>
+          <li><a href="contact">Commercial Contact</a></li>
         </ul>
       </div>
 

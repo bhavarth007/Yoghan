@@ -3,6 +3,22 @@
  * Commercial Application Scripts & Interactive Animations
  */
 
+// Strip .html extension and /index.html from URL bar immediately without reload
+(function() {
+  try {
+    const loc = window.location;
+    let cleanPath = loc.pathname;
+    if (cleanPath.endsWith('/index.html')) {
+      cleanPath = cleanPath.slice(0, -10);
+      if (!cleanPath) cleanPath = '/';
+      window.history.replaceState(null, '', cleanPath + loc.search + loc.hash);
+    } else if (cleanPath.endsWith('.html')) {
+      cleanPath = cleanPath.slice(0, -5);
+      window.history.replaceState(null, '', cleanPath + loc.search + loc.hash);
+    }
+  } catch(e) {}
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   renderAllProducts();
   initNavbar();
@@ -178,12 +194,18 @@ function closeMobileNav() {
 }
 
 function updateActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPath = window.location.pathname.split('/').filter(Boolean).pop() || '';
+  if (currentPath.endsWith('.html')) currentPath = currentPath.slice(0, -5);
+  if (currentPath === 'index' || currentPath === 'Yoghan') currentPath = '';
+
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
-    const linkPath = href.split('#')[0].split('?')[0];
-    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html') || (currentPath === 'index.html' && (linkPath === 'index.html' || linkPath === ''))) {
+    let linkPath = href.split('#')[0].split('?')[0].replace(/^\.\//, '');
+    if (linkPath.endsWith('.html')) linkPath = linkPath.slice(0, -5);
+    if (linkPath === 'index') linkPath = '';
+
+    if (linkPath === currentPath || (!currentPath && !linkPath)) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -192,9 +214,10 @@ function updateActiveNavLink() {
 }
 
 function applyFilterFromNav(cat, series = 'all') {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  if (!currentPath.includes('products.html')) {
-    window.location.href = `products.html?cat=${cat}&series=${series}`;
+  let currentPath = window.location.pathname.split('/').filter(Boolean).pop() || '';
+  if (currentPath.endsWith('.html')) currentPath = currentPath.slice(0, -5);
+  if (currentPath !== 'products') {
+    window.location.href = `products?cat=${cat}&series=${series}`;
     return;
   }
 
@@ -494,7 +517,7 @@ function openProductDetail(productId) {
   const modalFooter = modal.querySelector('.modal-footer-actions');
   if (modalFooter) {
     modalFooter.innerHTML = `
-      <a href="product.html?id=${product.id}" target="_blank" class="btn-ghost" style="text-decoration:none;" title="Open in separate tab">
+      <a href="product?id=${product.id}" target="_blank" class="btn-ghost" style="text-decoration:none;" title="Open in separate tab">
         <span>Open Standalone Page</span>
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
