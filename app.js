@@ -110,8 +110,15 @@ function initNavbar() {
       const isOpen = mobileDrawer.classList.toggle('open');
       navToggle.classList.toggle('open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      mobileDrawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
+  }
+
+  // Dedicated close button in mobile drawer
+  const drawerCloseBtn = document.getElementById('mobileDrawerClose');
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', closeMobileNav);
   }
 
   // Close mobile drawer on link click
@@ -163,6 +170,7 @@ function closeMobileNav() {
   const navToggle = document.getElementById('navToggle');
   if (mobileDrawer && navToggle) {
     mobileDrawer.classList.remove('open');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
     navToggle.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';

@@ -148,44 +148,67 @@
         </button>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-      <div class="mobile-drawer-inner">
-        <div class="mobile-search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" id="mobileSearchInput" placeholder="Quick search yarn, chips, fertilizer...">
+  <!-- ==================== FULL-SCREEN MOBILE NAVIGATION DRAWER ==================== -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a class="brand" href="#home" onclick="closeMobileNav()">
+        <div class="brand-logo-wrap">
+          <svg class="brand-icon" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" opacity="0.85"/>
+            <path d="M9 12c3.5 2.5 3.5 6 0 8M16 8.5c3.5 3 3.5 12 0 15M23 12c-3.5 2.5-3.5 6 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2.5" fill="var(--red)"/>
+          </svg>
         </div>
-        <ul class="mobile-nav-list">
-          <li><a href="#home" class="mobile-link">Home <span class="arr">→</span></a></li>
-          <li>
-            <button class="mobile-accordion-toggle" id="mobileProductsAccordion">
-              <span>Products & Solutions</span>
-              <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="mobile-sub-menu" id="mobileProductsSub">
-              <a href="#product" data-filter="nylon-reg" class="mobile-sub-link">FDY / HOY / POY / DTY Nylon</a>
-              <a href="#product" data-filter="nylon-feat" class="mobile-sub-link">Dope Dyed & High-Tenacity</a>
-              <a href="#product" data-filter="chips" class="mobile-sub-link">Polyamide 6 Polymer Chips</a>
-              <a href="#product" data-filter="fertilizer" class="mobile-sub-link">Industrial Ammonium Sulphate</a>
-            </div>
-          </li>
-          <li><a href="#specs" class="mobile-link">Technical Specs <span class="arr">→</span></a></li>
-          <li><a href="#about" class="mobile-link">About YOGHAN <span class="arr">→</span></a></li>
-          <li><a href="#manufacturing" class="mobile-link">Surat Plant & Quality <span class="arr">→</span></a></li>
-          <li><a href="#contact" class="mobile-link">Commercial Contact <span class="arr">→</span></a></li>
-        </ul>
-        <div class="mobile-drawer-actions">
-          <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
-          <button class="btn-ghost w-full" onclick="openCalculatorModal(); closeMobileNav();">Yarn Yield Calculator</button>
+        <div class="brand-text-block">
+          <span class="brand-name">YOGHAN</span>
+          <span class="brand-tagline">ADVANCED FIBRES & POLYMERS</span>
         </div>
-        <div class="mobile-drawer-contact">
-          <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
-          <p>Dispatches: GIDC Industrial Estate, Surat, Gujarat</p>
-        </div>
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <div class="mobile-search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="mobileSearchInput" placeholder="Search denier, chips, fertilizer...">
+      </div>
+
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li>
+          <button class="mobile-accordion-toggle" id="mobileProductsAccordion">
+            <span>Products & Solutions</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="mobile-sub-menu" id="mobileProductsSub">
+            <a href="#product" data-filter="nylon-reg" class="mobile-sub-link">Nylon Regular (FDY, DTY, POY, HOY)</a>
+            <a href="#product" data-filter="nylon-feat" class="mobile-sub-link">Specialty & High-Tenacity Yarns</a>
+            <a href="#product" data-filter="chips" class="mobile-sub-link">Polyamide 6 Polymer Chips (PA6)</a>
+            <a href="#product" data-filter="fertilizer" class="mobile-sub-link">Ammonium Sulphate & Chemicals</a>
+          </div>
+        </li>
+        <li><a href="#specs" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="#about" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="#manufacturing" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="#contact" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
+        <button class="btn-ghost w-full" onclick="openCalculatorModal(); closeMobileNav();">Yarn Yield Calculator</button>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
+        <p>Email: <strong>sales@yoghan.com</strong></p>
+        <p>Dispatches: GIDC Industrial Estate, Surat, Gujarat</p>
       </div>
     </div>
-  </header>
+  </aside>
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero" id="home">
