@@ -41,7 +41,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 72px;
   overflow-x: hidden !important;
   max-width: 100vw !important;
   width: 100% !important;
@@ -94,92 +94,18 @@ img, svg {
   width: 100% !important;
 }
 
-/* ==================== TOP ANNOUNCEMENT TICKER ==================== */
+/* ==================== TOP ANNOUNCEMENT TICKER (DISABLED) ==================== */
 .top-bar {
-  background: #060506;
-  color: var(--ash-light);
-  font-size: 12px;
-  border-bottom: 1px solid rgba(244, 238, 226, 0.08);
-  position: relative;
-  z-index: 60;
-  overflow: hidden;
-}
-
-.top-bar-inner {
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 7px 5vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.ticker-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ticker-dot {
-  color: var(--red);
-  font-size: 12px;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-.ticker-text {
-  font-weight: 500;
-  color: var(--cream);
-  font-size: 12px;
-}
-
-.ticker-sep {
-  color: var(--red);
-  font-size: 10px;
-}
-
-.top-bar-contact {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-shrink: 0;
-  font-size: 12px;
-}
-
-.top-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--ash);
-  transition: color 0.2s ease;
-}
-
-.top-link svg {
-  width: 13px;
-  height: 13px;
-  color: var(--red);
-}
-
-.top-link:hover {
-  color: var(--cream);
-}
-
-.top-divider {
-  color: rgba(244, 238, 226, 0.2);
+  display: none !important;
 }
 
 /* ==================== NAVIGATION BAR ==================== */
 .nav {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: rgba(11, 10, 12, 0.94);
+  z-index: 100;
+  width: 100%;
+  background: rgba(11, 10, 12, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--panel-line);
@@ -2593,30 +2519,15 @@ img, svg {
 
 @media (max-width: 768px) {
   .nav-inner {
-    padding: 12px 4vw;
+    padding: 14px 5vw;
   }
   .nav-cta {
     display: none;
   }
-  .top-bar-contact {
+  .btn-estimator-nav {
     display: none;
   }
-  .top-bar-inner {
-    padding: 6px 4vw;
-    justify-content: flex-start;
-  }
-  .ticker-wrap {
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .ticker-wrap::-webkit-scrollbar {
-    display: none;
-  }
-  .ticker-text {
-    font-size: 11px;
-  }
+
   .hero {
     padding: 44px 4vw 0;
     min-height: auto;
