@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Surat Plant & Technology — YOGHAN Continuous Polymerization & Melt Spinning</title>
+  <meta name="description" content="Explore YOGHAN's 4-step closed loop synthetic fibre manufacturing process: Continuous VK Column hydrolytic polymerization, vacuum demonomerization, high-speed godet spinning, and optical sensor QA.">
+  <!-- Security Headers for Static Commercial Website -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Ticker -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="ticker-wrap">
+        <span class="ticker-dot">✦</span>
+        <span class="ticker-text">Surat Facility Expands FDY Line 4: +12,000 MT Annual Capacity</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">OEKO-TEX® Standard 100 & ISO 9001:2015 Certified Production</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">Direct Dispatch to Bhiwandi, Tirupur, Ludhiana, Surat & Global Ports</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+912612984000" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 (261) 298-4000
+        </a>
+        <span class="top-divider">|</span>
+        <a href="mailto:commercial@yoghan.com" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          commercial@yoghan.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" id="mainNavbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="specifications.html" class="nav-link">Specifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="manufacturing.html" class="nav-link active">Plant & Tech</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-estimator-nav" onclick="openCalculatorModal()" title="Calculate Yarn Yield & Denier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/></svg>
+          <span>Yarn Calculator</span>
+        </button>
+        <button class="nav-cta" onclick="openQuoteModal()">
+          <span>Request a Quote</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a class="brand" href="index.html" onclick="closeMobileNav()">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products.html" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
+        <button class="btn-ghost w-full" onclick="openCalculatorModal(); closeMobileNav();">Yarn Yield Calculator</button>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
+        <p>Email: <strong>sales@yoghan.com</strong></p>
+        <p>Dispatches: GIDC Industrial Estate, Surat, Gujarat</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="kicker">INFRASTRUCTURE & PROCESS</p>
+      <h1>Closed-Loop Continuous Polymerization & Melt Spinning</h1>
+      <p>From molten caprolactam monomer to high-tenacity, streak-free yarn packages — our Surat manufacturing complex combines advanced German & Japanese engineering with computerized closed-loop environmental controls.</p>
+    </div>
+  </section>
+
+  <!-- Manufacturing Process Section -->
+  <main class="manufacturing-main" style="padding: 60px 0 80px;">
+    <div class="section-inner">
+      
+      <div class="section-head" style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <p class="kicker">STEP-BY-STEP ENGINEERING</p>
+        <h2>The 4-Stage Continuous Production Journey</h2>
+        <p>How we ensure tight relative viscosity, minimal oligomer residues, and flawless physical properties across every spinning lot.</p>
+      </div>
+
+      <!-- Process Steps Grid -->
+      <div class="process-steps-grid">
+        
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6m0 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 8v6"/><path d="M4.93 4.93l4.24 4.24m0 0a4 4 0 1 1 5.66 5.66m-5.66-5.66l-4.24 4.24"/></svg>
+          </div>
+          <h3>VK-Tube Continuous Polymerization</h3>
+          <p>Liquid caprolactam monomer is pumped into vertical continuous polymerization columns (VK tubes) with exact water catalyst and molecular chain terminators at 260°C under an inert nitrogen blanket.</p>
+          <div class="step-tag">VK-Tube Continuous</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="15.5" r="1.5"/><circle cx="15.5" cy="15.5" r="1.5"/></svg>
+          </div>
+          <h3>Hot Water Demonomerization & Drying</h3>
+          <p>Polymer strands are water-quenched, pelletized, and subjected to counter-current hot water extraction to wash out unreacted caprolactam and cyclic oligomers down to &lt; 0.55%, followed by inert nitrogen drying to &lt; 0.06% moisture.</p>
+          <div class="step-tag">Extractables &lt; 0.55%</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Melt Spinning & Heated Godet Drawing</h3>
+          <p>High-precision planetary metering gear pumps deliver molten nylon through laser-drilled micro spinnerets. Filaments pass through laminar cross-flow quench air, receive antistatic spin finish, and are oriented over heated multi-zone godet rolls.</p>
+          <div class="step-tag">Speeds up to 5,000 m/min</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Optical QA & Robotic Barcode Packing</h3>
+          <p>100% online optical cameras scan yarn profile, tension variation, and broken filaments before automatic bobbin doffing. Every package is barcoded with lot ID, operator stamp, tare weight, and net weight before automated vacuum shrink-wrapping.</p>
+          <div class="step-tag">100% Automated Scanning</div>
+        </div>
+
+      </div>
+
+      <!-- Infrastructure & Machinery Assets -->
+      <div style="margin-top: 80px; background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 44px 36px;">
+        <p class="kicker">PLANT ASSETS & HARDWARE</p>
+        <h2 style="font-family: var(--serif); font-size: 28px; margin: 0 0 24px; color: var(--ink-text);">Surat Manufacturing Fleet & Equipment</h2>
+        <p style="color: var(--ink-muted); margin-bottom: 32px; line-height: 1.6;">Our facility operates 24/7 across multiple dedicated spinning bays, continuous polymerization reactors, and automated conditioning warehouses.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div style="padding: 20px; background: var(--cream); border-radius: var(--radius-sm);">
+            <strong style="font-size: 16px; color: var(--ink-text); display: block; margin-bottom: 8px;">Oerlikon Barmag Spinning Towers</strong>
+            <p style="font-size: 13.5px; color: #5a5148; margin: 0; line-height: 1.55;">High-speed WINGS (Winding Integrated Guide System) winder modules providing optimized package build and smooth unwinding tension during high-speed warping.</p>
+          </div>
+
+          <div style="padding: 20px; background: var(--cream); border-radius: var(--radius-sm);">
+            <strong style="font-size: 16px; color: var(--ink-text); display: block; margin-bottom: 8px;">Continuous Polymerization VK Reactors</strong>
+            <p style="font-size: 13.5px; color: #5a5148; margin: 0; line-height: 1.55;">Direct caprolactam hydrolytic polymerization columns with computerized heat zones ensuring tight polydispersity index and constant relative viscosity.</p>
+          </div>
+
+          <div style="padding: 20px; background: var(--cream); border-radius: var(--radius-sm);">
+            <strong style="font-size: 16px; color: var(--ink-text); display: block; margin-bottom: 8px;">High-Speed Texturizing Bays</strong>
+            <p style="font-size: 13.5px; color: #5a5148; margin: 0; line-height: 1.55;">Polyurethane friction-disc texturizing machines with automated individual thread line tension monitoring, ensuring consistent crimp contraction and stretch stability.</p>
+          </div>
+
+          <div style="padding: 20px; background: var(--cream); border-radius: var(--radius-sm);">
+            <strong style="font-size: 16px; color: var(--ink-text); display: block; margin-bottom: 8px;">Chemical Byproduct Recovery Plant</strong>
+            <p style="font-size: 13.5px; color: #5a5148; margin: 0; line-height: 1.55;">Multi-effect evaporators and vacuum crystallization centrifuge units recovering high-purity crystalline ammonium sulphate from caprolactam wash streams.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sustainability & Environmental Responsibility -->
+      <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        <div style="background: var(--ink); color: #fff; padding: 36px 32px; border-radius: var(--radius-sm);">
+          <span style="color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">GREEN SYNTHESIS</span>
+          <h3 style="font-family: var(--serif); font-size: 24px; margin: 10px 0 14px; color: var(--cream);">Zero Liquid Discharge & Circular Recovery</h3>
+          <p style="font-size: 14px; color: var(--ash); line-height: 1.6; margin-bottom: 18px;">Our chemical plant recycles 100% of caprolactam washwater through multi-stage reverse osmosis and closed-loop evaporation. No industrial effluents leave our perimeter untreated.</p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 13.5px; color: var(--cream);">
+            <li style="padding: 6px 0;">✓ 100% Process Water Recycling</li>
+            <li style="padding: 6px 0;">✓ Zero Toxic Heavy Metal Catalysts</li>
+            <li style="padding: 6px 0;">✓ Clean Energy Natural Gas Heat Exchangers</li>
+          </ul>
+        </div>
+
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); padding: 36px 32px; border-radius: var(--radius-sm);">
+          <span style="color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">SAFETY & COMPLIANCE</span>
+          <h3 style="font-family: var(--serif); font-size: 24px; margin: 10px 0 14px; color: var(--ink-text);">Internationally Audited Standards</h3>
+          <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 18px;">Our manufacturing complex is regularly audited by independent certifying bodies to ensure workplace safety, chemical security, and end-user skin safety.</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span class="iso-tag">ISO 9001:2015</span>
+            <span class="iso-tag">ISO 14001:2015</span>
+            <span class="iso-tag">OEKO-TEX® Standard 100</span>
+            <span class="iso-tag">REACH Compliant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Strip -->
+      <div style="margin-top: 50px; background: var(--cream); border: 1px solid rgba(34,29,23,0.08); padding: 36px 32px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <h3 style="font-family: var(--serif); font-size: 22px; margin: 0 0 6px; color: var(--ink-text);">Need technical consultation on polymer grade selection?</h3>
+          <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Our extrusion and spinning engineers provide tailored recommendations for specific loom speeds, knit densities, and injection molding cycles.</p>
+        </div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="contact.html" class="btn-primary" style="text-decoration:none;">Talk to Technical Team</a>
+          <a href="specifications.html" class="btn-ghost" style="text-decoration:none;">Review Lab Specs Bench →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">COMMERCIAL INQUIRY</span>
+        <h2>Request Price Quotation</h2>
+        <p>Direct spot and contract volume quotes from our Surat manufacturing complex.</p>
+      </div>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteName">Full Name *</label>
+            <input type="text" id="quoteName" required placeholder="e.g. Rajesh Shah">
+          </div>
+          <div class="form-group">
+            <label for="quoteCompany">Company / Mill *</label>
+            <input type="text" id="quoteCompany" required placeholder="e.g. Surat Weaving Mills Ltd.">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quotePhone">Mobile / WhatsApp *</label>
+            <input type="tel" id="quotePhone" required placeholder="+91 98250 12345">
+          </div>
+          <div class="form-group">
+            <label for="quoteEmail">Official Email *</label>
+            <input type="email" id="quoteEmail" required placeholder="procurement@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteProduct">Selected Product *</label>
+            <select id="quoteProduct" required onchange="handleProductChange(this.value)">
+              <option value="Nylon 6 FDY Regular">Nylon 6 FDY (Fully Drawn Yarn)</option>
+              <option value="Nylon 6 DTY Regular">Nylon 6 DTY (Textured Yarn)</option>
+              <option value="Nylon 6 POY Regular">Nylon 6 POY (Partially Oriented)</option>
+              <option value="Nylon 6 HOY Regular">Nylon 6 HOY (Highly Oriented)</option>
+              <option value="Dope-Dyed Specialty Nylon">Dope-Dyed Specialty Colours</option>
+              <option value="High-Tenacity Industrial Nylon">High-Tenacity Industrial Nylon</option>
+              <option value="Polyamide 6 Chips (PA6)">Polyamide 6 Polymer Chips</option>
+              <option value="Ammonium Sulphate">Ammonium Sulphate Fertilizer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quoteQty">Quantity (MT) *</label>
+            <input type="number" id="quoteQty" min="1" step="0.5" required placeholder="Minimum 1 MT">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="quoteDestination">Delivery Destination *</label>
+          <input type="text" id="quoteDestination" required placeholder="e.g. Surat / Bhiwandi / Mundra Port">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-ghost" onclick="closeQuoteModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Submit Quotation Request</button>
+        </div>
+      </form>
+
+      <div class="form-success-card" id="quoteSuccessMsg" style="display:none;">
+        <div class="success-icon">✓</div>
+        <h3>Quotation Request Submitted Successfully!</h3>
+        <p>Reference <strong id="quoteRefNumber">#YOG-2026-948</strong>. Our commercial sales executive will connect on WhatsApp shortly.</p>
+        <button class="btn-primary" onclick="closeQuoteModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calculator Modal -->
+  <div class="modal-overlay" id="calcModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeCalculatorModal()" aria-label="Close calculator">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">ENGINEERING TOOL</span>
+        <h2>Yarn Yield & Conversion Calculator</h2>
+      </div>
+      <div class="calc-container">
+        <div class="calc-inputs">
+          <div class="form-group">
+            <label for="calcDenier">Yarn Denier (D)</label>
+            <input type="number" id="calcDenier" value="40" min="10" max="2000" oninput="runYarnCalculations()">
+          </div>
+          <div class="form-group">
+            <label for="calcWeightKg">Yarn Weight (Kilograms)</label>
+            <input type="number" id="calcWeightKg" value="1" min="0.1" step="0.5" oninput="runYarnCalculations()">
+          </div>
+        </div>
+        <div class="calc-results-grid">
+          <div class="calc-res-box">
+            <span class="res-title">Linear Length</span>
+            <span class="res-val" id="resMeters">225,000 m</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Decitex (dtex)</span>
+            <span class="res-val" id="resDtex">44.4 dtex</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Cotton Count (Ne)</span>
+            <span class="res-val" id="resNe">132.8 Ne</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Metric Count (Nm)</span>
+            <span class="res-val" id="resNm">225 Nm</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-actions">
+        <button class="btn-primary w-full" onclick="closeCalculatorModal(); openQuoteModal();">Request Pricing for This Denier →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastBox" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <a class="brand" href="index.html" aria-label="YOGHAN Home">
+          <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">
+          Manufacturer of Nylon 6 yarns, virgin PA6 chips, and agro ammonium sulphate. Delivering denier precision to global textile and compounding leaders since 1994.
+        </p>
+        <div class="iso-badges">
+          <span class="iso-tag">ISO 9001:2015</span>
+          <span class="iso-tag">OEKO-TEX® 100</span>
+          <span class="iso-tag">REACH Compliant</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-link-list">
+          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product Catalogue</a></li>
+          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
+          <li><a href="about.html">About YOGHAN</a></li>
+          <li><a href="manufacturing.html">Plant & Technology</a></li>
+          <li><a href="contact.html">Commercial Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Surat Commercial Office</h4>
+        <address class="footer-address">
+          YOGHAN Polymer & Fibre Complex<br>
+          GIDC Industrial Area, Surat 394221<br>
+          Gujarat, India<br><br>
+          <strong>Phone:</strong> +91 (261) 298-4000<br>
+          <strong>Email:</strong> sales@yoghan.com
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-inner">
+        <p>© 2026 YOGHAN All Rights Reserved. Surat, Gujarat, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

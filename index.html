@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>YOGHAN — Engineered Textile & Polymer Solutions | Surat</title>
+  <title>YOGHAN — Advanced Fibres & Polymers | Surat, India</title>
   <meta name="description" content="Surat's premier manufacturer of high-tenacity Nylon Yarn (FDY, POY, DTY, HOY), Polyamide 6 Chips, and industrial-grade Ammonium Sulphate. Consistent denier, global standards.">
   <!-- Security Headers for Static Commercial Website -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -45,7 +45,7 @@
   <!-- ==================== HEADER / NAVIGATION ==================== -->
   <header class="nav" id="mainNavbar">
     <div class="nav-inner">
-      <a class="brand" href="#home" aria-label="YOGHAN Home">
+      <a class="brand" href="index.html" aria-label="YOGHAN Home">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
 
@@ -53,70 +53,22 @@
       <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
         <ul class="nav-links">
           <li class="nav-item">
-            <a href="#home" class="nav-link active">Home</a>
-          </li>
-          <li class="nav-item dropdown-parent">
-            <a href="#product" class="nav-link">
-              Products
-              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-            </a>
-            <!-- Animated Dropdown / Mega-Menu -->
-            <div class="dropdown-panel">
-              <div class="dropdown-grid">
-                <div class="dropdown-col">
-                  <span class="dropdown-col-title">Nylon 6 Filament Yarns</span>
-                  <a href="#product" class="dropdown-item" data-filter="nylon-reg" data-series="fdy">
-                    <span class="item-title">Fully Drawn Yarn (FDY)</span>
-                    <span class="item-desc">High sheen, low elongation for shirting & warp</span>
-                  </a>
-                  <a href="#product" class="dropdown-item" data-filter="nylon-reg" data-series="dty">
-                    <span class="item-title">Drawn Textured Yarn (DTY)</span>
-                    <span class="item-desc">Crimped, bulked for circular knit & hosiery</span>
-                  </a>
-                  <a href="#product" class="dropdown-item" data-filter="nylon-reg" data-series="poy">
-                    <span class="item-title">Partially Oriented Yarn (POY)</span>
-                    <span class="item-desc">Feedstock for texturizing & draw-twisting</span>
-                  </a>
-                  <a href="#product" class="dropdown-item" data-filter="nylon-reg" data-series="hoy">
-                    <span class="item-title">Highly Oriented Yarn (HOY)</span>
-                    <span class="item-desc">Direct weaving grade with high stability</span>
-                  </a>
-                </div>
-                <div class="dropdown-col">
-                  <span class="dropdown-col-title">Specialty & Industrial</span>
-                  <a href="#product" class="dropdown-item" data-filter="nylon-feat" data-series="all">
-                    <span class="item-title">Dope-Dyed & Bright Trilobal</span>
-                    <span class="item-desc">Vibrant non-fading colours & diamond lustre</span>
-                  </a>
-                  <a href="#product" class="dropdown-item" data-filter="chips" data-series="all">
-                    <span class="item-title">Polyamide 6 Chips (PA6)</span>
-                    <span class="item-desc">Spinning & engineering moulding compound</span>
-                  </a>
-                  <a href="#product" class="dropdown-item" data-filter="fertilizer" data-series="all">
-                    <span class="item-title">Caprolactam Byproduct</span>
-                    <span class="item-desc">Industrial & agro Ammonium Sulphate (21% N)</span>
-                  </a>
-                </div>
-                <div class="dropdown-featured-card">
-                  <div class="card-badge">SURAT LAB CERTIFIED</div>
-                  <h4>Uniform Denier Guarantee</h4>
-                  <p>Guaranteed CV% &lt; 1.1 across high-speed loom packages.</p>
-                  <button class="card-link" onclick="openSpecSheetModal()">Download Specs Book →</button>
-                </div>
-              </div>
-            </div>
+            <a href="index.html" class="nav-link active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#specs" class="nav-link">Specifications</a>
+            <a href="products.html" class="nav-link">Products</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link">About Us</a>
+            <a href="specifications.html" class="nav-link">Specifications</a>
           </li>
           <li class="nav-item">
-            <a href="#manufacturing" class="nav-link">Plant & Tech</a>
+            <a href="about.html" class="nav-link">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -144,7 +96,7 @@
   <!-- ==================== FULL-SCREEN MOBILE NAVIGATION DRAWER ==================== -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="mobile-drawer-header">
-      <a class="brand" href="#home" onclick="closeMobileNav()">
+      <a class="brand" href="index.html" onclick="closeMobileNav()">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
       <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
@@ -153,29 +105,13 @@
     </div>
 
     <div class="mobile-drawer-body">
-      <div class="mobile-search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" id="mobileSearchInput" placeholder="Search denier, chips, fertilizer...">
-      </div>
-
       <ul class="mobile-nav-list">
-        <li><a href="#home" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
-        <li>
-          <button class="mobile-accordion-toggle" id="mobileProductsAccordion">
-            <span>Products & Solutions</span>
-            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="mobile-sub-menu" id="mobileProductsSub">
-            <a href="#product" data-filter="nylon-reg" class="mobile-sub-link">Nylon Regular (FDY, DTY, POY, HOY)</a>
-            <a href="#product" data-filter="nylon-feat" class="mobile-sub-link">Specialty & High-Tenacity Yarns</a>
-            <a href="#product" data-filter="chips" class="mobile-sub-link">Polyamide 6 Polymer Chips (PA6)</a>
-            <a href="#product" data-filter="fertilizer" class="mobile-sub-link">Ammonium Sulphate & Chemicals</a>
-          </div>
-        </li>
-        <li><a href="#specs" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
-        <li><a href="#about" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
-        <li><a href="#manufacturing" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
-        <li><a href="#contact" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+        <li><a href="index.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Home <span class="arr">→</span></a></li>
+        <li><a href="products.html" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
       </ul>
 
       <div class="mobile-drawer-actions">
@@ -211,7 +147,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#product" class="btn-primary hero-btn">
+        <a href="products.html" class="btn-primary hero-btn" style="text-decoration:none;">
           <span>Explore Product Catalogue</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -243,428 +179,211 @@
         </div>
       </div>
     </div>
-
-    <!-- ==================== PRODUCT FILTER BAND ==================== -->
-    <div class="filter-band-wrap" id="product">
-      <div class="filter-band">
-        <div class="filter-head-meta">
-          <span class="band-label">PRODUCT CATALOGUE & LIVE INVENTORY</span>
-          <span class="results-count" id="productCount">Showing 8 of 8 products</span>
-        </div>
-
-        <!-- Primary Category Tabs -->
-        <div class="filter-tabs" role="tablist" aria-label="Product Categories">
-          <button class="filter-tab-btn active" data-cat="all" role="tab">All Products</button>
-          <button class="filter-tab-btn" data-cat="nylon-reg" role="tab">Nylon Yarn – Regular</button>
-          <button class="filter-tab-btn" data-cat="nylon-feat" role="tab">Nylon Yarn – Specialty</button>
-          <button class="filter-tab-btn" data-cat="fertilizer" role="tab">Ammonium Sulphate</button>
-          <button class="filter-tab-btn" data-cat="chips" role="tab">Polyamide 6 Chips</button>
-        </div>
-
-        <!-- Series Sub-Filter Row & Search Input -->
-        <div class="filter-controls-row">
-          <div class="series-filter-group" id="seriesRow">
-            <span class="series-title">Yarn Series:</span>
-            <div class="series-chips">
-              <button class="series-pill active" data-series="all">All Series</button>
-              <button class="series-pill" data-series="fdy">FDY</button>
-              <button class="series-pill" data-series="hoy">HOY</button>
-              <button class="series-pill" data-series="poy">POY</button>
-              <button class="series-pill" data-series="dty">DTY</button>
-            </div>
-          </div>
-
-          <div class="search-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-            <input type="text" id="productSearch" placeholder="Search denier, grade, or lustre (e.g. 20D, FDY, Semi-Dull)..." aria-label="Search products">
-            <button class="clear-search" id="clearSearch" aria-label="Clear search" style="display:none;">&times;</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- ==================== INTERACTIVE PRODUCTS GRID SECTION ==================== -->
-  <section class="products-section">
+  <!-- ==================== CORE PRODUCT DIVISIONS PREVIEW ==================== -->
+  <section style="padding: 80px 0; background: var(--cream); border-bottom: 1px solid rgba(34,29,23,0.08);">
     <div class="section-inner">
-      
-      <!-- Live Filter Status Notification -->
-      <div id="noResultsMsg" class="no-results-box" style="display:none;">
-        <div class="no-results-icon">🔍</div>
-        <h3>No matching yarn or polymer grades found</h3>
-        <p>Try searching for a different denier range (e.g. "40D", "FDY"), or reset filters.</p>
-        <button class="btn-ghost" onclick="resetAllFilters()">Reset All Filters</button>
+      <div class="section-head" style="text-align: center; max-width: 800px; margin: 0 auto 48px;">
+        <p class="kicker">INTEGRATED PRODUCT DIVISIONS</p>
+        <h2>Engineered Polyamide & Chemical Solutions</h2>
+        <p>Manufactured under strict ISO 9001:2015 and OEKO-TEX Standard 100 quality systems in Surat, Gujarat.</p>
       </div>
 
-      <!-- Animated Product Cards Grid (Populated dynamically from products.js with all 20 products & 4K photography) -->
-      <div class="products-grid" id="productsGrid">
-        <!-- 20 Product Cards across 4 Departments rendered via products.js & app.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SPECIFICATIONS & LAB TEST BENCH SECTION ==================== -->
-  <section class="specs-section" id="specs">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="kicker">SURAT QUALITY ASSURANCE BENCH</p>
-        <h2>Engineered down to the individual filament</h2>
-        <p>Every bobbin is barcoded and quality-tested in our air-conditioned physical testing laboratory using Uster Tester 5, Textechno Statimat, and Lenzing thermal stress analyzers.</p>
-      </div>
-
-      <div class="specs-interactive-container reveal-stagger">
-        <!-- Interactive Specs Selector Tabs -->
-        <div class="specs-nav-tabs">
-          <button class="spec-tab-btn active" data-spec-target="spec-fdy">FDY Specification Table</button>
-          <button class="spec-tab-btn" data-spec-target="spec-dty">DTY Specification Table</button>
-          <button class="spec-tab-btn" data-spec-target="spec-chips">PA6 Chips Test Parameters</button>
-          <button class="spec-tab-btn" data-spec-target="spec-chem">Ammonium Sulphate Certificate</button>
-        </div>
-
-        <!-- Table 1: FDY -->
-        <div class="spec-table-card active" id="spec-fdy">
-          <div class="table-responsive">
-            <table class="specs-table">
-              <thead>
-                <tr>
-                  <th>Denier / Filament</th>
-                  <th>Lustre Grade</th>
-                  <th>Tenacity (g/denier)</th>
-                  <th>Elongation at Break (%)</th>
-                  <th>Boiling Shrinkage (%)</th>
-                  <th>Typical End Use</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>20D / 1f (Mono)</strong></td>
-                  <td>Semi-Dull / Bright</td>
-                  <td>4.8 &plusmn; 0.2</td>
-                  <td>28.0 &plusmn; 3.0</td>
-                  <td>7.0 &plusmn; 1.0</td>
-                  <td>Organza, Sarees, Sheer Curtains</td>
-                </tr>
-                <tr>
-                  <td><strong>30D / 24f (Micro)</strong></td>
-                  <td>Semi-Dull / Trilobal</td>
-                  <td>5.0 &plusmn; 0.2</td>
-                  <td>29.0 &plusmn; 2.5</td>
-                  <td>7.5 &plusmn; 0.8</td>
-                  <td>Ultra-light shirting, Chiffon, Lingerie</td>
-                </tr>
-                <tr>
-                  <td><strong>40D / 12f</strong></td>
-                  <td>Semi-Dull</td>
-                  <td>5.1 &plusmn; 0.2</td>
-                  <td>30.0 &plusmn; 2.5</td>
-                  <td>7.8 &plusmn; 0.8</td>
-                  <td>Warp knit fabrics, Georgette, Ribbons</td>
-                </tr>
-                <tr>
-                  <td><strong>70D / 24f & 68f</strong></td>
-                  <td>Semi-Dull / Full Dull</td>
-                  <td>5.2 &plusmn; 0.2</td>
-                  <td>31.0 &plusmn; 2.0</td>
-                  <td>8.0 &plusmn; 0.8</td>
-                  <td>Athleisure outer shells, Dupion, Twill</td>
-                </tr>
-                <tr>
-                  <td><strong>210D / 36f (Industrial)</strong></td>
-                  <td>Bright / Semi-Dull</td>
-                  <td>5.6 &plusmn; 0.3</td>
-                  <td>26.0 &plusmn; 2.0</td>
-                  <td>6.5 &plusmn; 0.8</td>
-                  <td>Luggage, Fishnet cordage, Reinforcement</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-meta-note">
-            <span>* Tested under standard climate: 20 &plusmn; 2°C, 65 &plusmn; 2% RH per ASTM D2256 / ISO 2062 test methods.</span>
-            <button class="btn-download-pdf" onclick="openSpecSheetModal()">Download Full Lab PDF</button>
-          </div>
-        </div>
-
-        <!-- Table 2: DTY -->
-        <div class="spec-table-card" id="spec-dty">
-          <div class="table-responsive">
-            <table class="specs-table">
-              <thead>
-                <tr>
-                  <th>Denier / Ply</th>
-                  <th>Crimp Contraction (%)</th>
-                  <th>Crimp Stability (%)</th>
-                  <th>Tenacity (gpd)</th>
-                  <th>Boiling Shrinkage (%)</th>
-                  <th>Application</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>40D / 34f / 1</strong></td>
-                  <td>45.0 &plusmn; 2.5</td>
-                  <td>84.0 &plusmn; 3.0</td>
-                  <td>4.4 &plusmn; 0.2</td>
-                  <td>3.5 &plusmn; 0.5</td>
-                  <td>Seamless activewear, yoga apparel</td>
-                </tr>
-                <tr>
-                  <td><strong>70D / 24f / 1</strong></td>
-                  <td>44.0 &plusmn; 2.0</td>
-                  <td>85.0 &plusmn; 2.5</td>
-                  <td>4.5 &plusmn; 0.2</td>
-                  <td>3.6 &plusmn; 0.5</td>
-                  <td>Circular knit legwear, sock plating</td>
-                </tr>
-                <tr>
-                  <td><strong>70D / 68f / 2 (Double)</strong></td>
-                  <td>46.0 &plusmn; 2.0</td>
-                  <td>87.0 &plusmn; 2.0</td>
-                  <td>4.6 &plusmn; 0.2</td>
-                  <td>3.2 &plusmn; 0.4</td>
-                  <td>Heavy thermal knitwear, compression garments</td>
-                </tr>
-                <tr>
-                  <td><strong>100D / 36f / 1</strong></td>
-                  <td>42.0 &plusmn; 2.5</td>
-                  <td>83.0 &plusmn; 3.0</td>
-                  <td>4.3 &plusmn; 0.2</td>
-                  <td>3.8 &plusmn; 0.5</td>
-                  <td>Upholstery, stretch denim weft</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-meta-note">
-            <span>* Texturized with polyurethane friction discs for low oil splash and uniform dye uptake.</span>
-            <button class="btn-download-pdf" onclick="openSpecSheetModal()">Download Full Lab PDF</button>
-          </div>
-        </div>
-
-        <!-- Table 3: Chips -->
-        <div class="spec-table-card" id="spec-chips">
-          <div class="table-responsive">
-            <table class="specs-table">
-              <thead>
-                <tr>
-                  <th>Test Parameter</th>
-                  <th>Testing Standard</th>
-                  <th>Unit</th>
-                  <th>Guaranteed Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Relative Viscosity (96% H₂SO₄)</td>
-                  <td>ISO 307 / ASTM D789</td>
-                  <td>RV</td>
-                  <td>2.45 &plusmn; 0.03 / 2.70 &plusmn; 0.03 / 3.30 &plusmn; 0.04</td>
-                </tr>
-                <tr>
-                  <td>Monomer & Oligomer Extractables</td>
-                  <td>ISO 6427 (Water extraction)</td>
-                  <td>% w/w</td>
-                  <td>&le; 0.55%</td>
-                </tr>
-                <tr>
-                  <td>Moisture Content</td>
-                  <td>Coulometric Karl Fischer</td>
-                  <td>% w/w</td>
-                  <td>&le; 0.06% (Packed condition)</td>
-                </tr>
-                <tr>
-                  <td>Melting Point</td>
-                  <td>DSC (10°C / min)</td>
-                  <td>°C</td>
-                  <td>220 &plusmn; 2°C</td>
-                </tr>
-                <tr>
-                  <td>Amino End Groups (-NH₂)</td>
-                  <td>Potentiometric titration</td>
-                  <td>mmol/kg</td>
-                  <td>42 &plusmn; 4</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-meta-note">
-            <span>* Continuous solid state polymerization (SSP) available for high viscosity industrial extrusion grades.</span>
-            <button class="btn-download-pdf" onclick="openSpecSheetModal()">Download Full Lab PDF</button>
-          </div>
-        </div>
-
-        <!-- Table 4: Fertilizer -->
-        <div class="spec-table-card" id="spec-chem">
-          <div class="table-responsive">
-            <table class="specs-table">
-              <thead>
-                <tr>
-                  <th>Chemical Parameter</th>
-                  <th>FCO / Standard Specification</th>
-                  <th>YOGHAN Typical Lab Result</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Total Ammoniacal Nitrogen</td>
-                  <td>Min 20.6% by weight</td>
-                  <td><strong>20.95%</strong></td>
-                </tr>
-                <tr>
-                  <td>Available Sulphur (as S)</td>
-                  <td>Min 23.0% by weight</td>
-                  <td><strong>24.10%</strong></td>
-                </tr>
-                <tr>
-                  <td>Free Acidity (as H₂SO₄)</td>
-                  <td>Max 0.05% by weight</td>
-                  <td><strong>0.025%</strong></td>
-                </tr>
-                <tr>
-                  <td>Moisture Content</td>
-                  <td>Max 1.0% by weight</td>
-                  <td><strong>0.20%</strong></td>
-                </tr>
-                <tr>
-                  <td>Appearance & Odour</td>
-                  <td>White/off-white crystalline salt</td>
-                  <td>Pure white, crystalline, odourless</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-meta-note">
-            <span>* Conforms fully to Fertilizer (Control) Order (FCO), 1985 standards. FCO Batch COA provided with every rake/truckload.</span>
-            <button class="btn-download-pdf" onclick="openSpecSheetModal()">Download Full Lab PDF</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== ABOUT US SECTION ==================== -->
-  <section class="about" id="about">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-visual-col reveal">
-          <div class="about-image-card">
-            <div class="visual-badge">EST. 1994 • SURAT</div>
-            <div class="about-art-pattern">
-              <svg viewBox="0 0 400 320" fill="none" class="about-diagram-svg">
-                <!-- Abstract plant geometry -->
-                <circle cx="200" cy="160" r="120" stroke="rgba(244,238,226,0.12)" stroke-width="1.5"/>
-                <circle cx="200" cy="160" r="80" stroke="rgba(244,238,226,0.15)" stroke-width="1.5"/>
-                <circle cx="200" cy="160" r="40" stroke="rgba(193,31,44,0.4)" stroke-width="2"/>
-                <path d="M60 160 L340 160" stroke="rgba(244,238,226,0.18)" stroke-width="1.5" stroke-dasharray="4 4"/>
-                <path d="M200 20 L200 300" stroke="rgba(244,238,226,0.18)" stroke-width="1.5" stroke-dasharray="4 4"/>
-                <!-- Weaving thread lines -->
-                <path d="M80 80 Q 200 180 320 80" stroke="var(--red)" stroke-width="2" fill="none"/>
-                <path d="M80 240 Q 200 140 320 240" stroke="#f4eee2" stroke-width="1.5" fill="none" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="plant-quote-overlay">
-              <span class="quote-mark">“</span>
-              <p>Precision in polymer viscosity is what turns ordinary yarn into flawless fabric at 1,000 RPM on water jet looms.</p>
-              <div class="quote-author">— Surat Engineering Operations</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-text-col reveal-stagger">
-          <p class="kicker">THE YOGHAN HERITAGE</p>
-          <h2>Three decades at the epicenter of India's textile capital</h2>
-          <p>
-            Established in Surat, Gujarat — the textile capital responsible for 40% of India's synthetic fabric — YOGHAN was founded with a singular ambition: to engineer polyamide yarns that match the highest European and Japanese spinning standards.
-          </p>
-          <p>
-            What began as a single-line texturizing plant has grown into a fully integrated chemical and synthetic fibre manufacturing complex. We operate continuous caprolactam polymerization, ultra-high-speed spinning towers, and precision texturizing bays equipped with computerized optical inspection.
-          </p>
-
-          <div class="about-stat-grid">
-            <div class="stat-card">
-              <b class="stat-num"><span class="counter" data-target="32">0</span>+</b>
-              <span class="stat-label">Years of Operation</span>
-            </div>
-            <div class="stat-card">
-              <b class="stat-num"><span class="counter" data-target="48000">0</span> MT</b>
-              <span class="stat-label">Capacity / Year</span>
-            </div>
-            <div class="stat-card">
-              <b class="stat-num"><span class="counter" data-target="28">0</span> / 28</b>
-              <span class="stat-label">Indian States Supplied</span>
-            </div>
-            <div class="stat-card">
-              <b class="stat-num"><span class="counter" data-target="18">0</span>+</b>
-              <span class="stat-label">Export Destinations</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PLANT & TECHNOLOGY SHOWCASE ==================== -->
-  <section class="tech-section" id="manufacturing">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="kicker">INFRASTRUCTURE & PROCESS</p>
-        <h2>From Caprolactam Monomer to High-Tenacity Package</h2>
-        <p>A closed-loop, highly automated production process ensuring exact crystalline structure, zero tint variability, and sustainable recovery.</p>
-      </div>
-
-      <div class="process-steps-grid reveal-stagger">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
         
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6m0 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 8v6"/><path d="M4.93 4.93l4.24 4.24m0 0a4 4 0 1 1 5.66 5.66m-5.66-5.66l-4.24 4.24"/></svg>
+        <!-- Division 1 -->
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="https://images.unsplash.com/photo-1542044801-30d3e45ae49a?auto=format&fit=crop&w=800&q=85" alt="Nylon Yarn Regular" style="width:100%; height:100%; object-fit:cover;">
+            <span class="badge-series" style="position:absolute; top:14px; left:14px;">5 CERTIFIED GRADES</span>
           </div>
-          <h3>Polymerization</h3>
-          <p>Continuous VK column hydrolytic polymerization of caprolactam into uniform Polyamide 6 chains with precise RV control.</p>
-          <div class="step-tag">VK-Tube Continuous</div>
+          <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">TEXTILE FILAMENT</span>
+              <h3 style="font-family: var(--serif); font-size: 20px; margin: 8px 0 10px; color: var(--ink-text);">Nylon 6 Yarn — Regular</h3>
+              <p style="font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; margin-bottom: 16px;">
+                FDY, DTY, POY, and HOY continuous filament yarns engineered for high-speed water jet, rapier weaving, and circular knitting.
+              </p>
+            </div>
+            <a href="products.html?cat=nylon-reg" class="btn-ghost w-full" style="text-decoration:none; text-align:center; display:block;">Explore Regular Yarns →</a>
+          </div>
         </div>
 
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="15.5" r="1.5"/><circle cx="15.5" cy="15.5" r="1.5"/></svg>
+        <!-- Division 2 -->
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=85" alt="Nylon Yarn Specialty" style="width:100%; height:100%; object-fit:cover;">
+            <span class="badge-crimson" style="position:absolute; top:14px; left:14px;">5 HIGH-PERFORMANCE GRADES</span>
           </div>
-          <h3>Chips Demonomerization</h3>
-          <p>Hot water counter-current washing extracts residual low-molecular weight oligomers down to &lt; 0.55%, followed by nitrogen inert drying.</p>
-          <div class="step-tag">Residual &lt; 0.55%</div>
+          <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">SPECIALTY & TECHNICAL</span>
+              <h3 style="font-family: var(--serif); font-size: 20px; margin: 8px 0 10px; color: var(--ink-text);">Nylon 6 Yarn — Specialty</h3>
+              <p style="font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; margin-bottom: 16px;">
+                Dope-dyed black and vibrant colors, bright trilobal diamond sheen, antimicrobial silver-ion, and high-tenacity industrial cordage.
+              </p>
+            </div>
+            <a href="products.html?cat=nylon-feat" class="btn-ghost w-full" style="text-decoration:none; text-align:center; display:block;">Explore Specialty Fibres →</a>
+          </div>
         </div>
 
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <!-- Division 3 -->
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=85" alt="Polyamide 6 Chips" style="width:100%; height:100%; object-fit:cover;">
+            <span class="badge-polymer" style="position:absolute; top:14px; left:14px;">5 POLYMER GRADES</span>
           </div>
-          <h3>Melt Spinning & Drawing</h3>
-          <p>High-precision gear metering pumps and micro-hole spinnerets quench filaments under laminar cross-flow air, drawn over heated godets.</p>
-          <div class="step-tag">Speeds up to 5,000 m/min</div>
+          <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">VIRGIN POLYMER</span>
+              <h3 style="font-family: var(--serif); font-size: 20px; margin: 8px 0 10px; color: var(--ink-text);">Polyamide 6 (PA6) Chips</h3>
+              <p style="font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; margin-bottom: 16px;">
+                Textile spinning grade (RV 2.45), engineering plastics (RV 2.70), film extrusion, and high-viscosity industrial chips (RV 3.30).
+              </p>
+            </div>
+            <a href="products.html?cat=chips" class="btn-ghost w-full" style="text-decoration:none; text-align:center; display:block;">Explore PA6 Chips →</a>
+          </div>
         </div>
 
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <!-- Division 4 -->
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="https://images.unsplash.com/photo-1592417817098-8f3d69104a47?auto=format&fit=crop&w=800&q=85" alt="Ammonium Sulphate" style="width:100%; height:100%; object-fit:cover;">
+            <span class="badge-chem" style="position:absolute; top:14px; left:14px;">5 CERTIFIED CHEMICALS</span>
           </div>
-          <h3>Optical QA & Barcoded Packing</h3>
-          <p>100% online tension monitoring and bobbin optical scanners check for broken filaments, package shape, and weight tolerance.</p>
-          <div class="step-tag">Uster Tester 5 Certified</div>
+          <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">AGRO & CHEMICAL</span>
+              <h3 style="font-family: var(--serif); font-size: 20px; margin: 8px 0 10px; color: var(--ink-text);">Ammonium Sulphate</h3>
+              <p style="font-size: 13.5px; color: var(--ink-muted); line-height: 1.55; margin-bottom: 16px;">
+                Pure crystalline caprolactam byproduct (21% N, 24% S), FCO certified for agricultural soil nutrition and industrial chemistry.
+              </p>
+            </div>
+            <a href="products.html?cat=fertilizer" class="btn-ghost w-full" style="text-decoration:none; text-align:center; display:block;">Explore Fertilizers →</a>
+          </div>
         </div>
 
+      </div>
+
+      <!-- View All 20 Products Banner -->
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="products.html" class="btn-primary" style="text-decoration:none; padding: 14px 36px; font-size: 15px;">
+          View Complete 20-Product Catalogue with 4K Gallery →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SUBPAGE TEASERS & VALUE HIGHLIGHTS ==================== -->
+  
+  <!-- Teaser 1: Lab Specs -->
+  <section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+      <div class="teaser-split-grid">
+        <div>
+          <p class="kicker">SURAT QUALITY ASSURANCE</p>
+          <h2 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 36px); margin: 12px 0 18px; color: var(--ink-text);">Tested Down to the Individual Filament</h2>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 24px;">
+            Every bobbin is barcoded and quality-verified in our climate-controlled testing lab using Uster Tester 5, Textechno Statimat ME+, and Lenzing thermal analyzers. We guarantee an evenness CV% under 1.1%, eliminating barre defects in circular knitting and warp sizing breaks.
+          </p>
+          <div style="display: flex; gap: 20px; margin-bottom: 28px;">
+            <div>
+              <strong style="font-size: 24px; color: var(--red); display: block;">&lt; 1.1%</strong>
+              <span style="font-size: 13px; color: var(--ink-muted);">Uster CV% Evenness</span>
+            </div>
+            <div style="border-left: 1px solid rgba(34,29,23,0.12); padding-left: 20px;">
+              <strong style="font-size: 24px; color: var(--red); display: block;">&plusmn; 0.03</strong>
+              <span style="font-size: 13px; color: var(--ink-muted);">Relative Viscosity Precision</span>
+            </div>
+            <div style="border-left: 1px solid rgba(34,29,23,0.12); padding-left: 20px;">
+              <strong style="font-size: 24px; color: var(--red); display: block;">100%</strong>
+              <span style="font-size: 13px; color: var(--ink-muted);">Barcode Traceability</span>
+            </div>
+          </div>
+          <a href="specifications.html" class="btn-primary" style="text-decoration:none;">Open Laboratory Specs Bench →</a>
+        </div>
+        <div style="background: var(--cream); border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 32px;">
+          <span style="font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: 1px;">LAB BENCH PREVIEW</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; margin: 8px 0 16px; color: var(--ink-text);">Certified Testing Standards</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #4a4138;">
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(34,29,23,0.08);"><strong>ASTM D2256:</strong> Breaking Tenacity & Elongation at Break</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(34,29,23,0.08);"><strong>ISO 2062:</strong> Yarn package tensile properties</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(34,29,23,0.08);"><strong>ISO 307:</strong> Polyamide 6 Relative Viscosity in 96% H₂SO₄</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(34,29,23,0.08);"><strong>ISO 6427:</strong> Water extraction of residual monomer &lt; 0.55%</li>
+            <li style="padding: 8px 0;"><strong>FCO 1985:</strong> Fertilizer Control Order compliance for Ammonium Sulphate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser 2: Plant & Manufacturing Tech -->
+  <section style="padding: 80px 0; background: var(--ink); color: #fff;">
+    <div class="section-inner">
+      <div class="teaser-split-grid">
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(244,238,226,0.12); border-radius: var(--radius-sm); padding: 32px;">
+          <span style="font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: 1.2px;">CONTINUOUS VK TUBE PROCESS</span>
+          <h3 style="font-family: var(--serif); font-size: 22px; margin: 10px 0 16px; color: var(--cream);">Closed-Loop Synthesis & Spinning</h3>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13.5px; color: var(--ash);">
+            <div><strong>01 Polymerization:</strong> Continuous VK column at 260°C under inert N₂ blanket.</div>
+            <div><strong>02 Demonomerization:</strong> Hot water counter-current washing down to &lt; 0.55% oligomers.</div>
+            <div><strong>03 Melt Extrusion:</strong> High-speed Oerlikon Barmag spinning towers up to 5,000 m/min.</div>
+            <div><strong>04 Optical QA:</strong> 100% online tension and package shape scanning with robotic packing.</div>
+          </div>
+        </div>
+        <div>
+          <p class="kicker" style="color: var(--red);">MANUFACTURING EXCELLENCE</p>
+          <h2 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 36px); margin: 12px 0 18px; color: var(--cream);">European & Japanese Engineering at Scale</h2>
+          <p style="font-size: 15px; color: var(--ash); line-height: 1.6; margin-bottom: 24px;">
+            Our Surat polymer complex pairs automated VK columns with Oerlikon Barmag WINGS take-up winders. We operate with a Zero Liquid Discharge (ZLD) policy, recycling 100% of caprolactam wash streams and recovering high-purity crystalline ammonium sulphate.
+          </p>
+          <a href="manufacturing.html" class="btn-primary" style="text-decoration:none;">Explore Plant Infrastructure & Technology →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser 3: The YOGHAN Heritage -->
+  <section style="padding: 80px 0; background: var(--cream);">
+    <div class="section-inner">
+      <div class="teaser-split-grid">
+        <div>
+          <p class="kicker">THE YOGHAN HERITAGE</p>
+          <h2 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 36px); margin: 12px 0 18px; color: var(--ink-text);">Three Decades in India's Textile Capital</h2>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 24px;">
+            Founded in 1994 in Surat, Gujarat — the powerhouse behind 40% of India's synthetic textile production — YOGHAN has grown into a 48,000 MT/year continuous polymerization and spinning enterprise supplying 28 Indian states and 18+ export countries.
+          </p>
+          <a href="about.html" class="btn-ghost" style="text-decoration:none;">Read Our Heritage & Milestones →</a>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="stat-card" style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid rgba(34,29,23,0.08);">
+            <b class="stat-num" style="color:var(--red); font-size:32px;">1994</b>
+            <span class="stat-label">Year of Inception</span>
+          </div>
+          <div class="stat-card" style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid rgba(34,29,23,0.08);">
+            <b class="stat-num" style="color:var(--red); font-size:32px;">48,000</b>
+            <span class="stat-label">MT Annual Capacity</span>
+          </div>
+          <div class="stat-card" style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid rgba(34,29,23,0.08);">
+            <b class="stat-num" style="color:var(--red); font-size:32px;">28 / 28</b>
+            <span class="stat-label">Indian States Supplied</span>
+          </div>
+          <div class="stat-card" style="background:#fff; padding:24px; border-radius:var(--radius-sm); border:1px solid rgba(34,29,23,0.08);">
+            <b class="stat-num" style="color:var(--red); font-size:32px;">18+</b>
+            <span class="stat-label">Export Countries</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ==================== APPLICATIONS & CLIENT INDUSTRIES ==================== -->
-  <section class="applications-section">
+  <section class="applications-section" style="padding: 80px 0; background: #fff;">
     <div class="section-inner">
-      <div class="section-head reveal">
+      <div class="section-head reveal" style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
         <p class="kicker">DIVERSE SECTORS SERVED</p>
-        <h2>Powering weaving mills, fashion houses & heavy industries</h2>
+        <h2>Powering Weaving Mills, Fashion Houses & Heavy Industries</h2>
       </div>
 
       <div class="app-grid reveal-stagger">
@@ -703,8 +422,8 @@
     </div>
   </section>
 
-  <!-- ==================== COMMERCIAL CONTACT / QUOTE STRIP ==================== -->
-  <section class="contact-strip" id="contact">
+  <!-- ==================== COMMERCIAL CONTACT STRIP ==================== -->
+  <section class="contact-strip" id="contact" style="padding: 60px 0;">
     <div class="section-inner reveal">
       <div class="contact-strip-card">
         <div class="contact-card-content">
@@ -719,14 +438,14 @@
             </div>
             <div class="point-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>Sales Desk: +91 (261) 298-4000 / +91 98251 00000</span>
+              <span>Sales Desk: +91 (261) 298-4000 / WhatsApp: +91 98251 00000</span>
             </div>
           </div>
         </div>
 
         <div class="contact-card-actions">
           <button class="btn-primary quote-btn-lg" onclick="openQuoteModal()">Request Custom Quote</button>
-          <button class="btn-ghost quote-btn-lg" onclick="openCalculatorModal()">Yield Calculator</button>
+          <a href="contact.html" class="btn-ghost quote-btn-lg" style="text-decoration:none; text-align:center;">Commercial Contact Page →</a>
           <span class="turnaround-note">⚡ Typical commercial response in &lt; 2 hours</span>
         </div>
       </div>
@@ -737,7 +456,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col brand-col">
-        <a class="brand" href="#home" aria-label="YOGHAN Home">
+        <a class="brand" href="index.html" aria-label="YOGHAN Home">
           <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
         </a>
         <p class="footer-brand-desc">
@@ -753,24 +472,24 @@
       <div class="footer-col">
         <h4>Products</h4>
         <ul class="footer-link-list">
-          <li><a href="#product" data-filter="nylon-reg" data-series="fdy">Nylon FDY (Fully Drawn Yarn)</a></li>
-          <li><a href="#product" data-filter="nylon-reg" data-series="dty">Nylon DTY (Textured Yarn)</a></li>
-          <li><a href="#product" data-filter="nylon-reg" data-series="poy">Nylon POY (Partially Oriented)</a></li>
-          <li><a href="#product" data-filter="nylon-reg" data-series="hoy">Nylon HOY (Highly Oriented)</a></li>
-          <li><a href="#product" data-filter="nylon-feat" data-series="all">Dope-Dyed Specialty Yarns</a></li>
-          <li><a href="#product" data-filter="chips" data-series="all">Polyamide 6 Virgin Chips</a></li>
-          <li><a href="#product" data-filter="fertilizer" data-series="all">Ammonium Sulphate Fertilizer</a></li>
+          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Technical & Plant</h4>
+        <h4>Navigation</h4>
         <ul class="footer-link-list">
-          <li><a href="#specs">Laboratory Specification Sheets</a></li>
-          <li><a href="#manufacturing">Polymerization & Spinning Tech</a></li>
-          <li><a href="#about">Surat Manufacturing Facility</a></li>
-          <li><button class="footer-btn-link" onclick="openSpecSheetModal()">Download Quality Brochure</button></li>
-          <li><button class="footer-btn-link" onclick="openCalculatorModal()">Yarn Denier / Meter Calculator</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product Catalogue</a></li>
+          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
+          <li><a href="about.html">About YOGHAN</a></li>
+          <li><a href="manufacturing.html">Plant & Technology</a></li>
+          <li><a href="contact.html">Commercial Contact</a></li>
         </ul>
       </div>
 
@@ -790,42 +509,35 @@
     <div class="footer-bottom-bar">
       <div class="footer-bottom-inner">
         <p>© 2026 YOGHAN All Rights Reserved. Surat, Gujarat, India.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <span class="sep">•</span>
-          <a href="#">Terms of Mill Sale</a>
-          <span class="sep">•</span>
-          <a href="#">Quality Assurance Policy</a>
-        </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== MODAL 1: REQUEST A QUOTE (INTERACTIVE COMMERCIAL DRAWER) ==================== -->
-  <div class="modal-overlay" id="quoteModal" aria-hidden="true" role="dialog" aria-labelledby="quoteModalTitle">
+  <!-- ==================== MODALS ==================== -->
+  <!-- Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" aria-hidden="true" role="dialog">
     <div class="modal-card">
       <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span class="modal-badge">COMMERCIAL INQUIRY</span>
-        <h2 id="quoteModalTitle">Request Commercial Price Quote</h2>
-        <p>Direct mill rates from our Surat plant. Fill out your requirements below for an official quotation within 2 business hours.</p>
+        <h2>Request Price Quotation</h2>
+        <p>Direct spot and contract volume quotes from our Surat manufacturing complex.</p>
       </div>
 
       <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
         <div class="form-row">
           <div class="form-group">
-            <label for="quoteName">Full Name / Contact Person *</label>
+            <label for="quoteName">Full Name *</label>
             <input type="text" id="quoteName" required placeholder="e.g. Rajesh Shah">
           </div>
           <div class="form-group">
-            <label for="quoteCompany">Company / Mill Name *</label>
+            <label for="quoteCompany">Company / Mill *</label>
             <input type="text" id="quoteCompany" required placeholder="e.g. Surat Weaving Mills Ltd.">
           </div>
         </div>
-
         <div class="form-row">
           <div class="form-group">
-            <label for="quotePhone">Mobile / WhatsApp Number *</label>
+            <label for="quotePhone">Mobile / WhatsApp *</label>
             <input type="tel" id="quotePhone" required placeholder="+91 98250 12345">
           </div>
           <div class="form-group">
@@ -833,10 +545,9 @@
             <input type="email" id="quoteEmail" required placeholder="procurement@company.com">
           </div>
         </div>
-
         <div class="form-row">
           <div class="form-group">
-            <label for="quoteProduct">Product Line *</label>
+            <label for="quoteProduct">Selected Product *</label>
             <select id="quoteProduct" required onchange="handleProductChange(this.value)">
               <option value="Nylon 6 FDY Regular">Nylon 6 FDY (Fully Drawn Yarn)</option>
               <option value="Nylon 6 DTY Regular">Nylon 6 DTY (Textured Yarn)</option>
@@ -849,56 +560,37 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="quoteDenier">Required Denier / Grade</label>
-            <input type="text" id="quoteDenier" placeholder="e.g. 40D/12f Semi-Dull or 2.45 RV">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="quoteQty">Estimated Quantity (MT / Metric Tonnes) *</label>
+            <label for="quoteQty">Quantity (MT) *</label>
             <input type="number" id="quoteQty" min="1" step="0.5" required placeholder="Minimum 1 MT">
           </div>
-          <div class="form-group">
-            <label for="quoteDestination">Delivery Destination (City / State / Port) *</label>
-            <input type="text" id="quoteDestination" required placeholder="e.g. Surat / Bhiwandi / Mundra Port">
-          </div>
         </div>
-
         <div class="form-group">
-          <label for="quoteNotes">Special Technical Requirements / End Application</label>
-          <textarea id="quoteNotes" rows="3" placeholder="Specify if water jet, air jet, circular knit, special finish oil %, or delivery schedule..."></textarea>
+          <label for="quoteDestination">Delivery Destination *</label>
+          <input type="text" id="quoteDestination" required placeholder="e.g. Surat / Bhiwandi / Mundra Port">
         </div>
-
         <div class="form-actions">
           <button type="button" class="btn-ghost" onclick="closeQuoteModal()">Cancel</button>
-          <button type="submit" class="btn-primary">
-            <span>Submit Quotation Request</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+          <button type="submit" class="btn-primary">Submit Quotation Request</button>
         </div>
       </form>
 
-      <!-- Success Notice (Hidden initially) -->
       <div class="form-success-card" id="quoteSuccessMsg" style="display:none;">
         <div class="success-icon">✓</div>
         <h3>Quotation Request Submitted Successfully!</h3>
-        <p>Thank you. Your enquiry reference is <strong id="quoteRefNumber">#YOG-2026-948</strong>. Our commercial sales executive will connect with you on WhatsApp/Phone with the best spot rate sheet.</p>
+        <p>Reference <strong id="quoteRefNumber">#YOG-2026-948</strong>. Our commercial sales executive will connect on WhatsApp shortly.</p>
         <button class="btn-primary" onclick="closeQuoteModal()">Done</button>
       </div>
     </div>
   </div>
 
-  <!-- ==================== MODAL 2: INTERACTIVE YARN CALCULATOR ==================== -->
+  <!-- Calculator Modal -->
   <div class="modal-overlay" id="calcModal" aria-hidden="true" role="dialog">
     <div class="modal-card">
       <button class="modal-close" onclick="closeCalculatorModal()" aria-label="Close calculator">&times;</button>
       <div class="modal-header">
         <span class="modal-badge">ENGINEERING TOOL</span>
-        <h2>Textile Yarn Yield & Conversion Calculator</h2>
-        <p>Calculate yarn meters per kilogram, fabric weight, and denier/decitex conversions instantly.</p>
+        <h2>Yarn Yield & Conversion Calculator</h2>
       </div>
-
       <div class="calc-container">
         <div class="calc-inputs">
           <div class="form-group">
@@ -910,62 +602,34 @@
             <input type="number" id="calcWeightKg" value="1" min="0.1" step="0.5" oninput="runYarnCalculations()">
           </div>
         </div>
-
         <div class="calc-results-grid">
           <div class="calc-res-box">
             <span class="res-title">Linear Length</span>
             <span class="res-val" id="resMeters">225,000 m</span>
-            <span class="res-sub">Meters per specified weight</span>
           </div>
           <div class="calc-res-box">
             <span class="res-title">Decitex (dtex)</span>
             <span class="res-val" id="resDtex">44.4 dtex</span>
-            <span class="res-sub">Grams per 10,000 meters</span>
           </div>
           <div class="calc-res-box">
-            <span class="res-title">English Cotton Count (Ne)</span>
+            <span class="res-title">Cotton Count (Ne)</span>
             <span class="res-val" id="resNe">132.8 Ne</span>
-            <span class="res-sub">Equivalent spinning count</span>
           </div>
           <div class="calc-res-box">
             <span class="res-title">Metric Count (Nm)</span>
             <span class="res-val" id="resNm">225 Nm</span>
-            <span class="res-sub">Kilometers per kilogram</span>
           </div>
         </div>
       </div>
-
       <div class="modal-footer-actions">
         <button class="btn-primary w-full" onclick="closeCalculatorModal(); openQuoteModal();">Request Pricing for This Denier →</button>
       </div>
     </div>
   </div>
 
-  <!-- ==================== MODAL 3: PRODUCT SPEC SHEET QUICK VIEW ==================== -->
-  <div class="modal-overlay" id="specModal" aria-hidden="true" role="dialog">
-    <div class="modal-card modal-lg">
-      <button class="modal-close" onclick="closeSpecModal()" aria-label="Close specifications">&times;</button>
-      <div class="modal-header">
-        <span class="modal-badge" id="specModalBadge">TECHNICAL DATA SHEET</span>
-        <h2 id="specModalTitle">Nylon 6 Fully Drawn Yarn (FDY)</h2>
-        <p id="specModalSubtitle">Surat Plant Standard Specifications, tolerances and packaging configuration.</p>
-      </div>
-
-      <div class="spec-modal-content" id="specModalBody">
-        <!-- Dynamic content filled via JavaScript -->
-      </div>
-
-      <div class="modal-footer-actions">
-        <button class="btn-ghost" onclick="closeSpecModal()">Close</button>
-        <button class="btn-primary" onclick="closeSpecModal(); openQuoteModal();">Request Mill Price for This Grade</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification Container -->
+  <!-- Toast Container -->
   <div class="toast-container" id="toastBox" aria-live="polite"></div>
 
-  <!-- Embedded Application Scripts -->
   <script src="products.js"></script>
   <script src="app.js"></script>
 </body>

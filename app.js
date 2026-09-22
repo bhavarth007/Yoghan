@@ -178,30 +178,24 @@ function closeMobileNav() {
 }
 
 function updateActiveNavLink() {
-  const sections = document.querySelectorAll('section[id], header[id]');
-  const scrollPos = window.scrollY + 140;
-
-  sections.forEach(sec => {
-    const top = sec.offsetTop;
-    const height = sec.offsetHeight;
-    const id = sec.getAttribute('id');
-    if (scrollPos >= top && scrollPos < top + height) {
-      document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === `#${id}`) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkPath = href.split('#')[0].split('?')[0];
+    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html') || (currentPath === 'index.html' && (linkPath === 'index.html' || linkPath === ''))) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 }
 
 function applyFilterFromNav(cat, series = 'all') {
-  // Scroll to product catalogue
-  const productSec = document.getElementById('product');
-  if (productSec) {
-    productSec.scrollIntoView({ behavior: 'smooth' });
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  if (!currentPath.includes('products.html')) {
+    window.location.href = `products.html?cat=${cat}&series=${series}`;
+    return;
   }
 
   // Activate corresponding category tab

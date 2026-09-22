@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Products Catalogue — YOGHAN Advanced Fibres & Polymers</title>
+  <meta name="description" content="Explore YOGHAN's complete product line: Nylon 6 FDY, DTY, POY, HOY, Dope-Dyed Yarns, Polyamide 6 Chips, and Ammonium Sulphate.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Ticker -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="ticker-wrap">
+        <span class="ticker-dot">✦</span>
+        <span class="ticker-text">Surat Facility Expands FDY Line 4: +12,000 MT Annual Capacity</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">OEKO-TEX® Standard 100 & ISO 9001:2015 Certified Production</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">Direct Dispatch to Bhiwandi, Tirupur, Ludhiana, Surat & Global Ports</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+912612984000" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 (261) 298-4000
+        </a>
+        <span class="top-divider">|</span>
+        <a href="mailto:commercial@yoghan.com" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          commercial@yoghan.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" id="mainNavbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link active">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="specifications.html" class="nav-link">Specifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-estimator-nav" onclick="openCalculatorModal()" title="Calculate Yarn Yield & Denier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/></svg>
+          <span>Yarn Calculator</span>
+        </button>
+        <button class="nav-cta" onclick="openQuoteModal()">
+          <span>Request a Quote</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a class="brand" href="index.html" onclick="closeMobileNav()">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
+        <button class="btn-ghost w-full" onclick="openCalculatorModal(); closeMobileNav();">Yarn Yield Calculator</button>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
+        <p>Email: <strong>sales@yoghan.com</strong></p>
+        <p>Dispatches: GIDC Industrial Estate, Surat, Gujarat</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="kicker">COMMERCIAL PRODUCT CATALOGUE</p>
+      <h1>Engineered Fibres, Polymers & Chemicals</h1>
+      <p>Explore 20 certified product lines across Nylon 6 continuous filament yarns, virgin Polyamide 6 chips, and agro-grade ammonium sulphate. Produced to strict denier and viscosity tolerances.</p>
+    </div>
+  </section>
+
+  <!-- Product Filter Band -->
+  <div class="filter-band-wrap" style="background:var(--ink); padding:28px 5vw;">
+    <div class="filter-band">
+      <div class="filter-head-meta">
+        <span class="band-label">LIVE INVENTORY & SPOT DISPATCH GRADES</span>
+        <span class="results-count" id="productCount">Showing 20 of 20 products</span>
+      </div>
+
+      <!-- Primary Category Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Product Categories">
+        <button class="filter-tab-btn active" data-cat="all" role="tab">All Products (20)</button>
+        <button class="filter-tab-btn" data-cat="nylon-reg" role="tab">Nylon Yarn – Regular (5)</button>
+        <button class="filter-tab-btn" data-cat="nylon-feat" role="tab">Nylon Yarn – Specialty (5)</button>
+        <button class="filter-tab-btn" data-cat="chips" role="tab">Polyamide 6 Chips (5)</button>
+        <button class="filter-tab-btn" data-cat="fertilizer" role="tab">Ammonium Sulphate (5)</button>
+      </div>
+
+      <!-- Series Sub-Filter Row & Search Input -->
+      <div class="filter-controls-row">
+        <div class="series-filter-group" id="seriesRow">
+          <span class="series-title">Yarn Series:</span>
+          <div class="series-chips">
+            <button class="series-pill active" data-series="all">All Series</button>
+            <button class="series-pill" data-series="fdy">FDY</button>
+            <button class="series-pill" data-series="hoy">HOY</button>
+            <button class="series-pill" data-series="poy">POY</button>
+            <button class="series-pill" data-series="dty">DTY</button>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="productSearch" placeholder="Search denier, grade, or lustre (e.g. 20D, FDY, RV 2.45)..." aria-label="Search products">
+          <button class="clear-search" id="clearSearch" aria-label="Clear search" style="display:none;">&times;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Products Grid Section -->
+  <main class="products-section">
+    <div class="section-inner">
+      <div id="noResultsMsg" class="no-results-box" style="display:none;">
+        <div class="no-results-icon">🔍</div>
+        <h3>No matching yarn or polymer grades found</h3>
+        <p>Try searching for a different denier range (e.g. "40D", "FDY"), or reset filters.</p>
+        <button class="btn-ghost" onclick="resetAllFilters()">Reset All Filters</button>
+      </div>
+
+      <!-- 20 Product Cards Rendered Dynamically from products.js -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </main>
+
+  <!-- Technical Spec Drawer Modal -->
+  <div class="modal-overlay" id="specModal" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" onclick="closeSpecModal()" aria-label="Close specifications">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge" id="specModalBadge">TECHNICAL DATA SHEET</span>
+        <h2 id="specModalTitle">Product Name</h2>
+        <p id="specModalSubtitle">Surat Plant Standard Specifications.</p>
+      </div>
+      <div class="spec-modal-content" id="specModalBody"></div>
+      <div class="modal-footer-actions"></div>
+    </div>
+  </div>
+
+  <!-- Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">COMMERCIAL INQUIRY</span>
+        <h2>Request Price Quotation</h2>
+        <p>Direct spot and contract volume quotes from our Surat manufacturing complex.</p>
+      </div>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteName">Full Name *</label>
+            <input type="text" id="quoteName" required placeholder="e.g. Rajesh Shah">
+          </div>
+          <div class="form-group">
+            <label for="quoteCompany">Company / Mill *</label>
+            <input type="text" id="quoteCompany" required placeholder="e.g. Surat Weaving Mills Ltd.">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quotePhone">Mobile / WhatsApp *</label>
+            <input type="tel" id="quotePhone" required placeholder="+91 98250 12345">
+          </div>
+          <div class="form-group">
+            <label for="quoteEmail">Official Email *</label>
+            <input type="email" id="quoteEmail" required placeholder="procurement@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quoteProduct">Selected Product *</label>
+            <select id="quoteProduct" required onchange="handleProductChange(this.value)">
+              <option value="Nylon 6 FDY Regular">Nylon 6 FDY (Fully Drawn Yarn)</option>
+              <option value="Nylon 6 DTY Regular">Nylon 6 DTY (Textured Yarn)</option>
+              <option value="Nylon 6 POY Regular">Nylon 6 POY (Partially Oriented)</option>
+              <option value="Nylon 6 HOY Regular">Nylon 6 HOY (Highly Oriented)</option>
+              <option value="Dope-Dyed Specialty Nylon">Dope-Dyed Specialty Colours</option>
+              <option value="High-Tenacity Industrial Nylon">High-Tenacity Industrial Nylon</option>
+              <option value="Polyamide 6 Chips (PA6)">Polyamide 6 Polymer Chips</option>
+              <option value="Ammonium Sulphate">Ammonium Sulphate Fertilizer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quoteQty">Quantity (MT) *</label>
+            <input type="number" id="quoteQty" min="1" step="0.5" required placeholder="Minimum 1 MT">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="quoteDestination">Delivery Destination *</label>
+          <input type="text" id="quoteDestination" required placeholder="e.g. Surat / Bhiwandi / Mundra Port">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-ghost" onclick="closeQuoteModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Submit Quotation Request</button>
+        </div>
+      </form>
+
+      <div class="form-success-card" id="quoteSuccessMsg" style="display:none;">
+        <div class="success-icon">✓</div>
+        <h3>Quotation Request Submitted Successfully!</h3>
+        <p>Reference <strong id="quoteRefNumber">#YOG-2026-948</strong>. Our commercial sales executive will connect on WhatsApp shortly.</p>
+        <button class="btn-primary" onclick="closeQuoteModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calculator Modal -->
+  <div class="modal-overlay" id="calcModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeCalculatorModal()" aria-label="Close calculator">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">ENGINEERING TOOL</span>
+        <h2>Yarn Yield & Conversion Calculator</h2>
+      </div>
+      <div class="calc-container">
+        <div class="calc-inputs">
+          <div class="form-group">
+            <label for="calcDenier">Yarn Denier (D)</label>
+            <input type="number" id="calcDenier" value="40" min="10" max="2000" oninput="runYarnCalculations()">
+          </div>
+          <div class="form-group">
+            <label for="calcWeightKg">Yarn Weight (Kilograms)</label>
+            <input type="number" id="calcWeightKg" value="1" min="0.1" step="0.5" oninput="runYarnCalculations()">
+          </div>
+        </div>
+        <div class="calc-results-grid">
+          <div class="calc-res-box">
+            <span class="res-title">Linear Length</span>
+            <span class="res-val" id="resMeters">225,000 m</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Decitex (dtex)</span>
+            <span class="res-val" id="resDtex">44.4 dtex</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Cotton Count (Ne)</span>
+            <span class="res-val" id="resNe">132.8 Ne</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Metric Count (Nm)</span>
+            <span class="res-val" id="resNm">225 Nm</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-actions">
+        <button class="btn-primary w-full" onclick="closeCalculatorModal(); openQuoteModal();">Request Pricing for This Denier →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastBox" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <a class="brand" href="index.html" aria-label="YOGHAN Home">
+          <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">
+          Manufacturer of Nylon 6 yarns, virgin PA6 chips, and agro ammonium sulphate. Delivering denier precision to global textile and compounding leaders since 1994.
+        </p>
+        <div class="iso-badges">
+          <span class="iso-tag">ISO 9001:2015</span>
+          <span class="iso-tag">OEKO-TEX® 100</span>
+          <span class="iso-tag">REACH Compliant</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-link-list">
+          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product Catalogue</a></li>
+          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
+          <li><a href="about.html">About YOGHAN</a></li>
+          <li><a href="manufacturing.html">Plant & Technology</a></li>
+          <li><a href="contact.html">Commercial Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Surat Commercial Office</h4>
+        <address class="footer-address">
+          YOGHAN Polymer & Fibre Complex<br>
+          GIDC Industrial Area, Surat 394221<br>
+          Gujarat, India<br><br>
+          <strong>Phone:</strong> +91 (261) 298-4000<br>
+          <strong>Email:</strong> sales@yoghan.com
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-inner">
+        <p>© 2026 YOGHAN All Rights Reserved. Surat, Gujarat, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Read category parameter from URL (e.g. products.html?cat=nylon-feat)
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get('cat');
+      const series = params.get('series');
+      if (cat) {
+        applyFilterFromNav(cat, series || 'all');
+      }
+    });
+  </script>
+</body>
+</html>

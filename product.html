@@ -192,20 +192,87 @@
   <!-- Header / Navigation -->
   <header class="nav" id="mainNavbar">
     <div class="nav-inner">
-      <a class="brand" href="index.html#home" aria-label="YOGHAN Home">
+      <a class="brand" href="index.html" aria-label="YOGHAN Home">
         <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
       </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link active">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="specifications.html" class="nav-link">Specifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
       <div class="nav-actions">
-        <a href="index.html#product" class="btn-ghost">← All Products</a>
-        <button class="nav-cta" onclick="openQuoteModal()">Request Spot Quote</button>
+        <a href="products.html" class="btn-ghost" style="text-decoration:none;">← Catalogue</a>
+        <button class="nav-cta" onclick="openQuoteModal()">
+          <span>Request a Quote</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" onclick="toggleMobileNav()">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- Full-Screen Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a class="brand" href="index.html" onclick="closeMobileNav()">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact.html" class="mobile-link" onclick="closeMobileNav()">Commercial Contact <span class="arr">→</span></a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
+        <p>Email: <strong>sales@yoghan.com</strong></p>
+      </div>
+    </div>
+  </aside>
+
   <!-- Product Standalone Detail Section -->
   <main class="product-page-main">
     <div class="back-nav-bar">
-      <a href="index.html#product" class="back-link">
+      <a href="products.html" class="back-link">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back to Full Catalogue
       </a>
@@ -387,10 +454,20 @@
       openQuoteModal();
     }
 
-    function handleQuoteSubmit(e) {
-      e.preventDefault();
-      document.getElementById('quoteForm').style.display = 'none';
-      document.getElementById('quoteSuccessMsg').style.display = 'block';
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobileDrawer');
+      const toggle = document.getElementById('navToggle');
+      if (drawer && toggle) {
+        const isOpen = drawer.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+      }
+    }
+
+    function closeMobileNav() {
+      const drawer = document.getElementById('mobileDrawer');
+      const toggle = document.getElementById('navToggle');
+      if (drawer) drawer.classList.remove('open');
+      if (toggle) toggle.classList.remove('open');
     }
   </script>
 </body>

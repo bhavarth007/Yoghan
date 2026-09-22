@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Commercial Contact & Spot Quote — YOGHAN Surat</title>
+  <meta name="description" content="Contact YOGHAN's Surat commercial sales desk for spot mill rates, contract volume booking, trial sample bobbins, and domestic/export freight logistics.">
+  <!-- Security Headers for Static Commercial Website -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Ticker -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="ticker-wrap">
+        <span class="ticker-dot">✦</span>
+        <span class="ticker-text">Surat Facility Expands FDY Line 4: +12,000 MT Annual Capacity</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">OEKO-TEX® Standard 100 & ISO 9001:2015 Certified Production</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-text">Direct Dispatch to Bhiwandi, Tirupur, Ludhiana, Surat & Global Ports</span>
+      </div>
+      <div class="top-bar-contact">
+        <a href="tel:+912612984000" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 (261) 298-4000
+        </a>
+        <span class="top-divider">|</span>
+        <a href="mailto:commercial@yoghan.com" class="top-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          commercial@yoghan.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="nav" id="mainNavbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="YOGHAN Home">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrapper" id="navLinks" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="specifications.html" class="nav-link">Specifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="manufacturing.html" class="nav-link">Plant & Tech</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-estimator-nav" onclick="openCalculatorModal()" title="Calculate Yarn Yield & Denier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/></svg>
+          <span>Yarn Calculator</span>
+        </button>
+        <button class="nav-cta" onclick="openQuoteModal()">
+          <span>Request a Quote</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a class="brand" href="index.html" onclick="closeMobileNav()">
+        <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img">
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link" onclick="closeMobileNav()">Home <span class="arr">→</span></a></li>
+        <li><a href="products.html" class="mobile-link" onclick="closeMobileNav()">All Products Catalogue <span class="arr">→</span></a></li>
+        <li><a href="specifications.html" class="mobile-link" onclick="closeMobileNav()">Technical Lab Specs <span class="arr">→</span></a></li>
+        <li><a href="about.html" class="mobile-link" onclick="closeMobileNav()">About YOGHAN <span class="arr">→</span></a></li>
+        <li><a href="manufacturing.html" class="mobile-link" onclick="closeMobileNav()">Surat Plant & Tech <span class="arr">→</span></a></li>
+        <li><a href="contact.html" class="mobile-link active" onclick="closeMobileNav()" style="color:var(--red);">Commercial Contact <span class="arr">→</span></a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <button class="btn-primary w-full" onclick="openQuoteModal(); closeMobileNav();">Request Commercial Quote</button>
+        <button class="btn-ghost w-full" onclick="openCalculatorModal(); closeMobileNav();">Yarn Yield Calculator</button>
+      </div>
+
+      <div class="mobile-drawer-contact">
+        <p>Direct Surat Sales Desk: <strong>+91 (261) 298-4000</strong></p>
+        <p>Email: <strong>sales@yoghan.com</strong></p>
+        <p>Dispatches: GIDC Industrial Estate, Surat, Gujarat</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="kicker">COMMERCIAL SALES & SPOT QUOTATIONS</p>
+      <h1>Direct Mill Dispatches From Our Surat Complex</h1>
+      <p>Connect directly with our commercial sales desk in Surat for spot market prices, contractual volume allocations, trial sample bobbins, and multi-modal logistics across India and international ports.</p>
+    </div>
+  </section>
+
+  <!-- Commercial Contact Main Content -->
+  <main class="contact-page-main" style="padding: 60px 0 80px;">
+    <div class="section-inner">
+      
+      <div class="contact-grid-wrap">
+        
+        <!-- Column 1: Interactive Quotation Form -->
+        <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 36px 32px; box-shadow: var(--shadow-sm);">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-series" style="background:rgba(193,31,44,0.1); color:var(--red); font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; letter-spacing:1px;">OFFICIAL INQUIRY DESK</span>
+            <h2 style="font-family:var(--serif); font-size: 26px; margin: 10px 0 6px; color: var(--ink-text);">Request Mill Price Quote</h2>
+            <p style="font-size: 14px; color: var(--ink-muted); margin: 0;">Fill out your order specifications below for official pricing within 2 business hours.</p>
+          </div>
+
+          <form id="contactPageQuoteForm" onsubmit="handleContactPageSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cName">Contact Person *</label>
+                <input type="text" id="cName" required placeholder="e.g. Rajesh Shah">
+              </div>
+              <div class="form-group">
+                <label for="cCompany">Company / Mill Name *</label>
+                <input type="text" id="cCompany" required placeholder="e.g. Surat Weaving Mills Ltd.">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cPhone">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="cPhone" required placeholder="+91 98250 12345">
+              </div>
+              <div class="form-group">
+                <label for="cEmail">Official Business Email *</label>
+                <input type="email" id="cEmail" required placeholder="procurement@company.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cProduct">Product Line *</label>
+                <select id="cProduct" required>
+                  <option value="Nylon 6 FDY Regular">Nylon 6 FDY (Fully Drawn Yarn)</option>
+                  <option value="Nylon 6 DTY Regular">Nylon 6 DTY (Textured Yarn)</option>
+                  <option value="Nylon 6 POY Regular">Nylon 6 POY (Partially Oriented)</option>
+                  <option value="Nylon 6 HOY Regular">Nylon 6 HOY (Highly Oriented)</option>
+                  <option value="Dope-Dyed Specialty Nylon">Dope-Dyed Specialty Colours</option>
+                  <option value="High-Tenacity Industrial Nylon">High-Tenacity Industrial Nylon</option>
+                  <option value="Polyamide 6 Chips (PA6)">Polyamide 6 Polymer Chips</option>
+                  <option value="Ammonium Sulphate">Ammonium Sulphate Fertilizer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cQty">Quantity Required (MT) *</label>
+                <input type="number" id="cQty" min="1" step="0.5" required placeholder="e.g. 5 MT">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cDestination">Destination (City / Freight Depot / Port) *</label>
+              <input type="text" id="cDestination" required placeholder="e.g. Bhiwandi, Tirupur, Ludhiana, or Mundra Port">
+            </div>
+
+            <div class="form-group">
+              <label for="cNotes">Specific Denier, Filament Count, or End-Use Notes</label>
+              <textarea id="cNotes" rows="3" placeholder="e.g. 40D/12f Semi-Dull with high intermingle for water jet warp weaving..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full" style="padding: 14px; font-size: 15px; margin-top: 10px;">
+              Submit Quotation Request →
+            </button>
+          </form>
+
+          <div class="form-success-card" id="contactSuccessMsg" style="display:none; margin-top: 20px;">
+            <div class="success-icon">✓</div>
+            <h3>Quotation Request Dispatched to Commercial Desk!</h3>
+            <p>Inquiry reference <strong id="contactRefNumber">#YOG-2026-COMM-104</strong>. Our senior sales executive will contact you via WhatsApp and email within 2 hours.</p>
+            <button class="btn-primary" onclick="resetContactForm()">Submit Another Inquiry</button>
+          </div>
+        </div>
+
+        <!-- Column 2: Commercial Office & Plant Details -->
+        <div>
+          <!-- Commercial Desk Card -->
+          <div style="background: var(--ink); color: #fff; padding: 36px 32px; border-radius: var(--radius-sm); margin-bottom: 24px;">
+            <span style="color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;">SURAT COMMERCIAL DESK</span>
+            <h3 style="font-family: var(--serif); font-size: 24px; margin: 10px 0 20px; color: var(--cream);">Manufacturing Complex & Sales Office</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <div style="display: flex; gap: 14px; align-items: flex-start;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--red)" stroke-width="2" style="flex-shrink:0; margin-top:3px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong style="color: #fff; display:block; margin-bottom:4px;">Factory & Registered Office:</strong>
+                  <span style="color: var(--ash); font-size: 13.5px; line-height: 1.5; display:block;">
+                    YOGHAN Polymer & Fibre Complex<br>
+                    Plot No. 42-48, GIDC Industrial Estate, Pandesara / Sachin<br>
+                    Surat 394221, Gujarat, India
+                  </span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 14px; align-items: flex-start;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--red)" stroke-width="2" style="flex-shrink:0; margin-top:3px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <strong style="color: #fff; display:block; margin-bottom:4px;">Direct Commercial Telephones:</strong>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">+91 (261) 298-4000 (Board Line)</span>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">+91 98251 00000 (WhatsApp Business)</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 14px; align-items: flex-start;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--red)" stroke-width="2" style="flex-shrink:0; margin-top:3px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong style="color: #fff; display:block; margin-bottom:4px;">Electronic Inquiries:</strong>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">Domestic Sales: <strong>sales@yoghan.com</strong></span>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">Export Desk: <strong>export@yoghan.com</strong></span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 14px; align-items: flex-start;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--red)" stroke-width="2" style="flex-shrink:0; margin-top:3px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>
+                  <strong style="color: #fff; display:block; margin-bottom:4px;">Commercial Hours:</strong>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">Monday – Saturday: 08:30 – 19:00 IST</span>
+                  <span style="color: var(--ash); font-size: 13.5px; display:block;">Plant Dispatch Dock: 24/7 Operations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logistics Corridors Card -->
+          <div style="background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 28px 26px;">
+            <strong style="font-size: 16px; color: var(--ink-text); display: block; margin-bottom: 10px;">Primary Freight & Delivery Corridors</strong>
+            <p style="font-size: 13.5px; color: var(--ink-muted); margin-bottom: 14px; line-height: 1.55;">Direct fleet dispatches from Surat GIDC to leading synthetic weaving and knitting centers:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="badge-series">Bhiwandi (Same-Day)</span>
+              <span class="badge-series">Tirupur (48 Hours)</span>
+              <span class="badge-series">Ludhiana (48 Hours)</span>
+              <span class="badge-series">Bhilwara (24 Hours)</span>
+              <span class="badge-series">Panipat (48 Hours)</span>
+              <span class="badge-series">Hazira / Mundra Port (Export)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Accordion / Commercial Terms -->
+      <div style="margin-top: 70px; background: #fff; border: 1px solid rgba(34,29,23,0.08); border-radius: var(--radius-sm); padding: 40px 36px;">
+        <p class="kicker">COMMERCIAL FAQ & TERMS</p>
+        <h2 style="font-family: var(--serif); font-size: 26px; margin: 0 0 28px; color: var(--ink-text);">Frequently Asked Purchasing Questions</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div>
+            <strong style="color: var(--ink-text); font-size: 15px; display: block; margin-bottom: 6px;">What is the Minimum Order Quantity (MOQ)?</strong>
+            <p style="font-size: 13.5px; color: var(--ink-muted); margin: 0; line-height: 1.55;">For domestic deliveries, our standard MOQ is 1 Metric Tonne (approx. 1 truckload or combined assortment). For sea freight export, MOQ is 1x20ft FCL container.</p>
+          </div>
+
+          <div>
+            <strong style="color: var(--ink-text); font-size: 15px; display: block; margin-bottom: 6px;">Can we request sample bobbins for loom trial?</strong>
+            <p style="font-size: 13.5px; color: var(--ink-muted); margin: 0; line-height: 1.55;">Yes, trial packages (1 to 2 sample bobbins) with full Uster 5 data sheet are dispatched via courier within 24 hours of commercial verification.</p>
+          </div>
+
+          <div>
+            <strong style="color: var(--ink-text); font-size: 15px; display: block; margin-bottom: 6px;">What quality certifications accompany each shipment?</strong>
+            <p style="font-size: 13.5px; color: var(--ink-muted); margin: 0; line-height: 1.55;">Every consignment includes an official Certificate of Analysis (COA) specifying exact denier, tenacity, elongation, boiling water shrinkage, and OEKO-TEX Standard 100 compliance.</p>
+          </div>
+
+          <div>
+            <strong style="color: var(--ink-text); font-size: 15px; display: block; margin-bottom: 6px;">What are the standard payment terms?</strong>
+            <p style="font-size: 13.5px; color: var(--ink-muted); margin: 0; line-height: 1.55;">We offer spot payment discounts, confirmed LC at sight for export, and revolving credit terms for verified high-volume contractual mills.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Calculator Modal -->
+  <div class="modal-overlay" id="calcModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeCalculatorModal()" aria-label="Close calculator">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">ENGINEERING TOOL</span>
+        <h2>Yarn Yield & Conversion Calculator</h2>
+      </div>
+      <div class="calc-container">
+        <div class="calc-inputs">
+          <div class="form-group">
+            <label for="calcDenier">Yarn Denier (D)</label>
+            <input type="number" id="calcDenier" value="40" min="10" max="2000" oninput="runYarnCalculations()">
+          </div>
+          <div class="form-group">
+            <label for="calcWeightKg">Yarn Weight (Kilograms)</label>
+            <input type="number" id="calcWeightKg" value="1" min="0.1" step="0.5" oninput="runYarnCalculations()">
+          </div>
+        </div>
+        <div class="calc-results-grid">
+          <div class="calc-res-box">
+            <span class="res-title">Linear Length</span>
+            <span class="res-val" id="resMeters">225,000 m</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Decitex (dtex)</span>
+            <span class="res-val" id="resDtex">44.4 dtex</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Cotton Count (Ne)</span>
+            <span class="res-val" id="resNe">132.8 Ne</span>
+          </div>
+          <div class="calc-res-box">
+            <span class="res-title">Metric Count (Nm)</span>
+            <span class="res-val" id="resNm">225 Nm</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-actions">
+        <button class="btn-primary w-full" onclick="closeCalculatorModal();">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastBox" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <a class="brand" href="index.html" aria-label="YOGHAN Home">
+          <img src="assets/logo-white.png" alt="YOGHAN" class="brand-logo-img footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">
+          Manufacturer of Nylon 6 yarns, virgin PA6 chips, and agro ammonium sulphate. Delivering denier precision to global textile and compounding leaders since 1994.
+        </p>
+        <div class="iso-badges">
+          <span class="iso-tag">ISO 9001:2015</span>
+          <span class="iso-tag">OEKO-TEX® 100</span>
+          <span class="iso-tag">REACH Compliant</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-link-list">
+          <li><a href="products.html">Nylon FDY (Fully Drawn Yarn)</a></li>
+          <li><a href="products.html">Nylon DTY (Textured Yarn)</a></li>
+          <li><a href="products.html">Nylon POY (Partially Oriented)</a></li>
+          <li><a href="products.html">Nylon HOY (Highly Oriented)</a></li>
+          <li><a href="products.html">Polyamide 6 Virgin Chips</a></li>
+          <li><a href="products.html">Ammonium Sulphate Fertilizer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product Catalogue</a></li>
+          <li><a href="specifications.html">Laboratory Specs Bench</a></li>
+          <li><a href="about.html">About YOGHAN</a></li>
+          <li><a href="manufacturing.html">Plant & Technology</a></li>
+          <li><a href="contact.html">Commercial Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Surat Commercial Office</h4>
+        <address class="footer-address">
+          YOGHAN Polymer & Fibre Complex<br>
+          GIDC Industrial Area, Surat 394221<br>
+          Gujarat, India<br><br>
+          <strong>Phone:</strong> +91 (261) 298-4000<br>
+          <strong>Email:</strong> sales@yoghan.com
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-inner">
+        <p>© 2026 YOGHAN All Rights Reserved. Surat, Gujarat, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function handleContactPageSubmit(e) {
+      e.preventDefault();
+      const refId = `#YOG-2026-COMM-${Math.floor(100 + Math.random() * 900)}`;
+      document.getElementById('contactRefNumber').textContent = refId;
+      document.getElementById('contactPageQuoteForm').style.display = 'none';
+      document.getElementById('contactSuccessMsg').style.display = 'block';
+      showToast(`Inquiry ${refId} received! Commercial sales will connect shortly.`);
+    }
+    function resetContactForm() {
+      document.getElementById('contactPageQuoteForm').reset();
+      document.getElementById('contactPageQuoteForm').style.display = 'block';
+      document.getElementById('contactSuccessMsg').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
