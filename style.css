@@ -137,9 +137,9 @@ img, svg {
 }
 
 .brand-logo-img {
-  height: 34px;
+  height: 40px;
   width: auto;
-  max-width: 180px;
+  max-width: 210px;
   object-fit: contain;
   display: block;
   transition: transform 0.25s var(--ease-spring), filter 0.25s ease;
@@ -150,8 +150,8 @@ img, svg {
 }
 
 .footer-logo-img {
-  height: 38px;
-  max-width: 195px;
+  height: 46px;
+  max-width: 240px;
 }
 
 .brand-logo-wrap {
