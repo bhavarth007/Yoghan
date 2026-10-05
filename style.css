@@ -2035,6 +2035,215 @@ img, svg {
   color: var(--cream);
 }
 
+.footer-map-link {
+  display: block;
+  color: var(--ash);
+  text-decoration: none;
+  margin-bottom: 12px;
+  padding: 6px 8px;
+  margin-left: -8px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+}
+
+.footer-map-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-company-name {
+  color: var(--cream);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.footer-map-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #ff857a;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-map-link:hover .footer-map-action {
+  color: #ffb4ac;
+  transform: translateX(3px);
+  text-decoration: underline;
+}
+
+.footer-contact-details {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-inline-link {
+  color: var(--ash);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-inline-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Contact Strip Map Link */
+.point-item.point-link {
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  margin: -4px -8px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+}
+
+.point-item.point-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.point-item.point-link:hover span {
+  color: #fff;
+}
+
+.map-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(184, 51, 42, 0.2);
+  color: #ff857a;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  border: 1px solid rgba(184, 51, 42, 0.35);
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.point-item.point-link:hover .map-action-pill {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+
+/* Contact Page Map Direct Link */
+.contact-map-direct-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+  margin-top: 4px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.contact-map-direct-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(184, 51, 42, 0.5);
+  transform: translateY(-1px);
+}
+
+.click-map-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ff857a;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: color 0.2s ease;
+}
+
+.contact-map-direct-link:hover .click-map-badge {
+  color: #ffb4ac;
+  text-decoration: underline;
+}
+
+/* Contact Page Interactive Map Card */
+.contact-map-section {
+  margin-top: 50px;
+  background: #fff;
+  border: 1px solid rgba(34, 29, 23, 0.08);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contact-map-header {
+  padding: 22px 28px;
+  background: #fbf9f5;
+  border-bottom: 1px solid rgba(34, 29, 23, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact-map-header-text h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink-text);
+  margin: 4px 0 2px;
+}
+
+.contact-map-header-text p {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.contact-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-map-btn:hover {
+  background: #9d251d;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(184, 51, 42, 0.25);
+}
+
+.contact-map-frame-wrap {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: #eae5dc;
+}
+
+.contact-map-frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .footer-bottom-bar {
   max-width: 1360px;
   margin: 28px auto 0;
